@@ -8,13 +8,73 @@ def apply_custom_styles() -> None:
     st.markdown(
         """
         <style>
-            /* Main app background */
+            /* Base app colours */
             .stApp {
                 background: linear-gradient(180deg, #0d1f0d 0%, #0a0a0a 100%);
                 color: #ffffff;
             }
 
-            /* Hide default Streamlit header/footer clutter */
+            /* Ensure all Streamlit text is readable on dark background */
+            .stApp,
+            .stApp p,
+            .stApp span,
+            .stApp label,
+            .stApp h1,
+            .stApp h2,
+            .stApp h3,
+            .stApp h4,
+            .stApp h5,
+            .stApp h6,
+            .stApp li,
+            .stApp a {
+                color: #f5f5f5;
+            }
+
+            [data-testid="stMarkdownContainer"] p,
+            [data-testid="stMarkdownContainer"] li,
+            [data-testid="stMarkdownContainer"] strong,
+            [data-testid="stMarkdownContainer"] h1,
+            [data-testid="stMarkdownContainer"] h2,
+            [data-testid="stMarkdownContainer"] h3 {
+                color: #f5f5f5 !important;
+            }
+
+            [data-testid="stSidebar"] p,
+            [data-testid="stSidebar"] span,
+            [data-testid="stSidebar"] label,
+            [data-testid="stSidebar"] h1,
+            [data-testid="stSidebar"] h2,
+            [data-testid="stSidebar"] h3,
+            [data-testid="stSidebar"] li {
+                color: #f0f0f0 !important;
+            }
+
+            /* Metrics */
+            [data-testid="stMetric"] label {
+                color: #c8e6c8 !important;
+            }
+
+            [data-testid="stMetric"] [data-testid="stMetricValue"] {
+                color: #4ade80 !important;
+            }
+
+            /* Form labels: radio, select, text input */
+            .stRadio label,
+            .stRadio label span,
+            .stRadio label p,
+            .stSelectbox label,
+            .stSelectbox label span,
+            .stTextInput label,
+            .stTextInput label span {
+                color: #f5f5f5 !important;
+            }
+
+            /* Expander */
+            [data-testid="stExpander"] summary,
+            [data-testid="stExpander"] p {
+                color: #f5f5f5 !important;
+            }
+
             header[data-testid="stHeader"] {
                 background: transparent;
             }
@@ -24,7 +84,7 @@ def apply_custom_styles() -> None:
                 font-size: 2.5rem;
                 font-weight: 800;
                 text-align: center;
-                color: #ffffff;
+                color: #ffffff !important;
                 margin-bottom: 0.25rem;
                 line-height: 1.2;
             }
@@ -32,14 +92,14 @@ def apply_custom_styles() -> None:
             .game-subtitle {
                 font-size: 1.1rem;
                 text-align: center;
-                color: #a8d5a8;
+                color: #d4f0d4 !important;
                 margin-bottom: 2rem;
             }
 
             /* Stat cards on home screen */
             .stat-card {
-                background: rgba(34, 85, 34, 0.35);
-                border: 1px solid #2d6a2d;
+                background: rgba(34, 85, 34, 0.55);
+                border: 1px solid #3d8b3d;
                 border-radius: 12px;
                 padding: 1rem;
                 text-align: center;
@@ -48,7 +108,7 @@ def apply_custom_styles() -> None:
 
             .stat-label {
                 font-size: 0.85rem;
-                color: #a8d5a8;
+                color: #d4f0d4 !important;
                 text-transform: uppercase;
                 letter-spacing: 0.05em;
             }
@@ -56,20 +116,19 @@ def apply_custom_styles() -> None:
             .stat-value {
                 font-size: 1.75rem;
                 font-weight: 700;
-                color: #4ade80;
+                color: #6ee7a0 !important;
             }
 
-            /* Difficulty option labels */
             .difficulty-label {
                 font-size: 1rem;
                 font-weight: 600;
-                color: #ffffff;
+                color: #ffffff !important;
             }
 
-            /* Large primary buttons */
+            /* Buttons */
             div.stButton > button[kind="primary"] {
                 background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
-                color: #ffffff;
+                color: #ffffff !important;
                 font-size: 1.25rem;
                 font-weight: 700;
                 padding: 0.75rem 2rem;
@@ -81,29 +140,26 @@ def apply_custom_styles() -> None:
 
             div.stButton > button[kind="primary"]:hover {
                 background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
-                color: #ffffff;
+                color: #ffffff !important;
                 border: none;
             }
 
-            /* Secondary buttons */
+            div.stButton > button {
+                color: #ffffff !important;
+            }
+
             div.stButton > button[kind="secondary"] {
-                background: rgba(34, 85, 34, 0.4);
-                color: #ffffff;
+                background: rgba(34, 85, 34, 0.6);
+                color: #ffffff !important;
                 font-size: 1rem;
                 font-weight: 600;
-                border: 1px solid #2d6a2d;
+                border: 1px solid #3d8b3d;
                 border-radius: 10px;
                 width: 100%;
                 min-height: 3rem;
             }
 
-            /* Radio buttons for difficulty */
-            div[data-testid="stRadio"] label {
-                font-size: 1.05rem !important;
-                color: #ffffff !important;
-            }
-
-            /* Sidebar styling */
+            /* Sidebar */
             section[data-testid="stSidebar"] {
                 background: #0f1f0f;
                 border-right: 1px solid #2d6a2d;
@@ -113,10 +169,10 @@ def apply_custom_styles() -> None:
                 padding-top: 1.5rem;
             }
 
-            /* Clue cards during gameplay */
+            /* Clue cards */
             .clue-card {
-                background: rgba(34, 85, 34, 0.45);
-                border: 1px solid #2d6a2d;
+                background: rgba(20, 50, 20, 0.85);
+                border: 1px solid #3d8b3d;
                 border-radius: 14px;
                 padding: 1.25rem 1.5rem;
                 margin-bottom: 0.75rem;
@@ -124,7 +180,7 @@ def apply_custom_styles() -> None:
 
             .clue-number {
                 font-size: 0.8rem;
-                color: #4ade80;
+                color: #6ee7a0 !important;
                 text-transform: uppercase;
                 letter-spacing: 0.08em;
                 margin-bottom: 0.5rem;
@@ -133,20 +189,20 @@ def apply_custom_styles() -> None:
             .clue-text {
                 font-size: 1.35rem;
                 font-weight: 600;
-                color: #ffffff;
+                color: #ffffff !important;
                 line-height: 1.4;
             }
 
             .clue-hint {
                 text-align: center;
-                color: #a8d5a8;
+                color: #d4f0d4 !important;
                 font-size: 0.95rem;
                 margin-top: 0.5rem;
             }
 
             /* Score display */
             .score-display {
-                background: rgba(0, 0, 0, 0.35);
+                background: rgba(0, 0, 0, 0.5);
                 border: 2px solid #22c55e;
                 border-radius: 14px;
                 padding: 1rem;
@@ -157,7 +213,7 @@ def apply_custom_styles() -> None:
             .score-label {
                 display: block;
                 font-size: 0.85rem;
-                color: #a8d5a8;
+                color: #d4f0d4 !important;
                 text-transform: uppercase;
                 letter-spacing: 0.05em;
             }
@@ -166,36 +222,61 @@ def apply_custom_styles() -> None:
                 display: block;
                 font-size: 2.5rem;
                 font-weight: 800;
-                color: #4ade80;
+                color: #6ee7a0 !important;
             }
 
             /* Result card */
             .result-card {
-                background: rgba(34, 85, 34, 0.35);
-                border: 1px solid #2d6a2d;
+                background: rgba(20, 50, 20, 0.85);
+                border: 1px solid #3d8b3d;
                 border-radius: 14px;
                 padding: 1.25rem 1.5rem;
                 margin: 1rem 0;
                 font-size: 1.1rem;
                 line-height: 1.8;
+                color: #f5f5f5 !important;
             }
 
-            /* Badges */
-            .round-badge, .difficulty-badge {
+            .result-card p,
+            .result-card strong {
+                color: #f5f5f5 !important;
+            }
+
+            .round-badge,
+            .difficulty-badge {
                 text-align: center;
                 font-size: 0.9rem;
-                color: #a8d5a8;
+                color: #d4f0d4 !important;
                 margin-bottom: 0.5rem;
             }
 
-            /* Text input styling */
+            /* Text input */
             div[data-testid="stTextInput"] input {
                 font-size: 1.15rem !important;
                 padding: 0.75rem 1rem !important;
                 border-radius: 10px !important;
+                background-color: #1a2e1a !important;
+                color: #ffffff !important;
+                border: 1px solid #3d8b3d !important;
             }
 
-            /* Mobile-friendly text sizing */
+            div[data-testid="stTextInput"] input::placeholder {
+                color: #9cc49c !important;
+            }
+
+            /* Selectbox */
+            div[data-baseweb="select"] > div {
+                background-color: #1a2e1a !important;
+                color: #ffffff !important;
+                border-color: #3d8b3d !important;
+            }
+
+            /* Alert boxes — keep dark text on light alert backgrounds */
+            [data-testid="stAlert"] p,
+            [data-testid="stAlert"] div {
+                color: inherit !important;
+            }
+
             @media (max-width: 768px) {
                 .game-title {
                     font-size: 2rem;
