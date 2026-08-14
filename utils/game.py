@@ -5,6 +5,7 @@ from __future__ import annotations
 import json
 import random
 import re
+import time
 import unicodedata
 from pathlib import Path
 from typing import Any
@@ -18,6 +19,26 @@ WRONG_GUESS_PENALTIES = [10, 15, 20]
 # Bonus awarded when the player gets three correct answers in a row
 STREAK_BONUS = 20
 STREAK_BONUS_THRESHOLD = 3
+
+# Seconds allowed per round in timer mode
+TIMER_SECONDS = 30
+
+DIFFICULTY_LEVELS = ["easy", "medium", "hard", "impossible"]
+
+DIFFICULTY_LABELS = {
+    "easy": "🟢 Easy",
+    "medium": "🟡 Medium",
+    "hard": "🔴 Hard",
+    "impossible": "💀 Impossible",
+}
+
+GAME_MODES = ["classic", "challenge", "timer"]
+
+GAME_MODE_LABELS = {
+    "classic": "Classic — Guess one player",
+    "challenge": "5 Player Challenge — Guess five players",
+    "timer": "⏱️ Timer — 30 seconds per player",
+}
 
 REQUIRED_PLAYER_FIELDS = {
     "name",
@@ -164,7 +185,35 @@ def check_guess(guess: str, player: dict[str, Any]) -> bool:
 def get_clues_for_difficulty(player: dict[str, Any], difficulty: str) -> list[str]:
     """Return the clue list for the chosen difficulty."""
     clues = player.get("clues", {})
+    if difficulty == "impossible":
+        return list(clues.get("impossible", clues.get("hard", clues.get("easy", []))))
     return list(clues.get(difficulty, clues.get("easy", [])))
+
+
+def get_club_display(player: dict[str, Any]) -> str:
+    """Return the club label shown in the always-visible player info."""
+    if player.get("retired"):
+        if player.get("ballon_dor_wins", 0) > 0 or player.get("world_cup_winner"):
+            return "🏆 Icon"
+        return "⭐ Hero"
+
+    clubs = player.get("clubs", [])
+    return clubs[-1] if clubs else "—"
+
+
+def get_base_player_info(player: dict[str, Any]) -> dict[str, str]:
+    """Return the three always-visible facts: country, club, position."""
+    return {
+        "country": player.get("nationality", "—"),
+        "club": get_club_display(player),
+        "position": player.get("position", "—"),
+    }
+
+
+def get_timer_remaining(round_start_time: float) -> int:
+    """Seconds left in the current timer round."""
+    elapsed = time.time() - round_start_time
+    return max(0, TIMER_SECONDS - int(elapsed))
 
 
 def clue_score(clues_revealed: int) -> int:

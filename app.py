@@ -1,15 +1,25 @@
 """Football Guess the Player — Streamlit app entry point."""
 
+import time
+from datetime import timedelta
+
 import streamlit as st
 
 from utils.game import (
+    DIFFICULTY_LABELS,
+    DIFFICULTY_LEVELS,
+    GAME_MODE_LABELS,
+    GAME_MODES,
     STREAK_BONUS,
     STREAK_BONUS_THRESHOLD,
+    TIMER_SECONDS,
     calculate_round_score,
     check_guess,
     clue_score,
     format_player_info,
+    get_base_player_info,
     get_clues_for_difficulty,
+    get_timer_remaining,
     load_players,
     select_random_player,
 )
@@ -50,6 +60,8 @@ def init_session_state() -> None:
         "challenge_wrong_guesses": 0,
         "guess_input_key": 0,
         "wrong_feedback_active": False,
+        "round_start_time": 0.0,
+        "timed_out": False,
     }
     for key, value in defaults.items():
         if key not in st.session_state:
@@ -75,6 +87,7 @@ def go_home() -> None:
     st.session_state.challenge_scores = []
     st.session_state.challenge_players = []
     st.session_state.challenge_wrong_guesses = 0
+    st.session_state.timed_out = False
 
 
 def start_new_round() -> None:
@@ -101,6 +114,8 @@ def start_new_round() -> None:
     st.session_state.round_score = 0
     st.session_state.streak_bonus = 0
     st.session_state.guess_input_key += 1
+    st.session_state.round_start_time = time.time()
+    st.session_state.timed_out = False
     st.session_state.screen = "playing"
 
 
@@ -120,7 +135,7 @@ def start_game() -> None:
     start_new_round()
 
 
-def finish_round(*, won: bool, gave_up: bool = False) -> None:
+def finish_round(*, won: bool, gave_up: bool = False, timed_out: bool = False) -> None:
     """Update session stats and move to the round result screen."""
     player = st.session_state.current_player
     if player is None:
@@ -151,6 +166,7 @@ def finish_round(*, won: bool, gave_up: bool = False) -> None:
     st.session_state.round_score = score
     st.session_state.round_won = won
     st.session_state.gave_up = gave_up
+    st.session_state.timed_out = timed_out
     st.session_state.games_played += 1
     st.session_state.total_points += score
     st.session_state.best_score = max(st.session_state.best_score, score)
@@ -195,6 +211,61 @@ def reveal_next_clue() -> None:
 def reveal_answer() -> None:
     """End the round with zero points."""
     finish_round(won=False, gave_up=True)
+
+
+def render_base_player_info(player: dict) -> None:
+    """Show country, club, and position — always visible, not revealable clues."""
+    info = get_base_player_info(player)
+    st.markdown(
+        f"""
+        <div class="base-info-row">
+            <div class="base-info-card">
+                <span class="base-info-label">🌍 Country</span>
+                <span class="base-info-value">{info["country"]}</span>
+            </div>
+            <div class="base-info-card">
+                <span class="base-info-label">🏟️ Club</span>
+                <span class="base-info-value">{info["club"]}</span>
+            </div>
+            <div class="base-info-card">
+                <span class="base-info-label">📍 Position</span>
+                <span class="base-info-value">{info["position"]}</span>
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+
+def render_timer_display() -> None:
+    """Show and update the 30-second countdown in timer mode."""
+    if st.session_state.game_mode != "timer":
+        return
+
+    remaining = get_timer_remaining(st.session_state.round_start_time)
+    urgent = remaining <= 10
+    timer_class = "timer-display timer-urgent" if urgent else "timer-display"
+
+    st.markdown(
+        f"""
+        <div class="{timer_class}">
+            <span class="timer-label">Time left</span>
+            <span class="timer-value">{remaining}s</span>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+    if remaining <= 0 and not st.session_state.timed_out:
+        finish_round(won=False, timed_out=True)
+        st.rerun()
+
+
+@st.fragment(run_every=timedelta(seconds=1))
+def timer_tick() -> None:
+    """Auto-refresh the countdown every second in timer mode."""
+    if st.session_state.screen == "playing" and st.session_state.game_mode == "timer":
+        render_timer_display()
 
 
 def render_score_display() -> None:
@@ -269,11 +340,16 @@ def render_home_screen() -> None:
     st.markdown("")
 
     st.markdown("**Choose difficulty**")
+    difficulty_index = (
+        DIFFICULTY_LEVELS.index(st.session_state.difficulty)
+        if st.session_state.difficulty in DIFFICULTY_LEVELS
+        else 0
+    )
     difficulty = st.radio(
         "Difficulty",
-        options=["easy", "medium", "hard"],
-        index=["easy", "medium", "hard"].index(st.session_state.difficulty),
-        format_func=lambda d: {"easy": "🟢 Easy", "medium": "🟡 Medium", "hard": "🔴 Hard"}[d],
+        options=DIFFICULTY_LEVELS,
+        index=difficulty_index,
+        format_func=lambda d: DIFFICULTY_LABELS[d],
         horizontal=True,
         label_visibility="collapsed",
     )
@@ -282,14 +358,16 @@ def render_home_screen() -> None:
     st.markdown("")
 
     st.markdown("**Choose game mode**")
+    mode_index = (
+        GAME_MODES.index(st.session_state.game_mode)
+        if st.session_state.game_mode in GAME_MODES
+        else 0
+    )
     game_mode = st.radio(
         "Game mode",
-        options=["classic", "challenge"],
-        index=["classic", "challenge"].index(st.session_state.game_mode),
-        format_func=lambda m: {
-            "classic": "Classic — Guess one player",
-            "challenge": "5 Player Challenge — Guess five players",
-        }[m],
+        options=GAME_MODES,
+        index=mode_index,
+        format_func=lambda m: GAME_MODE_LABELS[m],
         label_visibility="collapsed",
     )
     st.session_state.game_mode = game_mode
@@ -323,8 +401,13 @@ def render_game_screen() -> None:
             unsafe_allow_html=True,
         )
 
-    diff_label = st.session_state.difficulty.capitalize()
-    st.markdown(f'<p class="difficulty-badge">{diff_label} mode</p>', unsafe_allow_html=True)
+    diff_label = DIFFICULTY_LABELS.get(st.session_state.difficulty, "Easy")
+    st.markdown(f'<p class="difficulty-badge">{diff_label}</p>', unsafe_allow_html=True)
+
+    timer_tick()
+    render_base_player_info(player)
+
+    st.markdown('<p class="section-label">Extra clues</p>', unsafe_allow_html=True)
 
     render_score_display()
 
@@ -410,7 +493,7 @@ def render_round_result() -> None:
             """,
             unsafe_allow_html=True,
         )
-    else:
+    elif st.session_state.gave_up:
         st.warning("Answer revealed")
         st.markdown(f"## {player['name']}")
         st.markdown(
@@ -418,6 +501,18 @@ def render_round_result() -> None:
             <div class="result-card">
                 <p>⭐ <strong>Score:</strong> 0</p>
                 <p>You gave up this round.</p>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+    else:
+        st.error("⏱️ Time's up!")
+        st.markdown(f"## {player['name']}")
+        st.markdown(
+            """
+            <div class="result-card">
+                <p>⭐ <strong>Score:</strong> 0</p>
+                <p>You ran out of time.</p>
             </div>
             """,
             unsafe_allow_html=True,
@@ -442,7 +537,7 @@ def render_round_result() -> None:
             st.session_state.challenge_round += 1
             start_new_round()
             st.rerun()
-    elif st.session_state.game_mode == "classic":
+    elif st.session_state.game_mode == "classic" or st.session_state.game_mode == "timer":
         if st.button("NEXT PLAYER", type="primary", use_container_width=True):
             start_new_round()
             st.rerun()
@@ -507,11 +602,16 @@ def render_sidebar() -> None:
         st.markdown("---")
 
         st.markdown("**Difficulty**")
+        diff_index = (
+            DIFFICULTY_LEVELS.index(st.session_state.difficulty)
+            if st.session_state.difficulty in DIFFICULTY_LEVELS
+            else 0
+        )
         difficulty = st.selectbox(
             "Difficulty",
-            options=["easy", "medium", "hard"],
-            index=["easy", "medium", "hard"].index(st.session_state.difficulty),
-            format_func=lambda d: {"easy": "🟢 Easy", "medium": "🟡 Medium", "hard": "🔴 Hard"}[d],
+            options=DIFFICULTY_LEVELS,
+            index=diff_index,
+            format_func=lambda d: DIFFICULTY_LABELS[d],
             label_visibility="collapsed",
         )
         st.session_state.difficulty = difficulty
@@ -532,11 +632,12 @@ def render_sidebar() -> None:
             """
             1. Pick a difficulty and game mode.
             2. Tap **START GAME**.
-            3. Read clues one at a time.
-            4. Type your guess — fewer clues means more points!
-            5. Wrong guesses cost points.
-            6. Get 3 correct in a row for a +20 bonus!
-            7. Beat your best score.
+            3. Country, club, and position are always shown.
+            4. Reveal extra clues one at a time.
+            5. Type your guess — fewer clues means more points!
+            6. **Timer mode:** guess within 30 seconds.
+            7. **Impossible:** the toughest clues.
+            8. Get 3 correct in a row for a +20 bonus!
             """
         )
 

@@ -286,6 +286,82 @@ def apply_custom_styles() -> None:
                 margin-bottom: 0.5rem;
             }
 
+            .section-label {
+                font-size: 0.9rem;
+                font-weight: 700;
+                color: #a8d5a8 !important;
+                text-transform: uppercase;
+                letter-spacing: 0.08em;
+                margin: 0.5rem 0 0.75rem 0;
+            }
+
+            /* Always-visible player facts */
+            .base-info-row {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 0.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .base-info-card {
+                background: rgba(15, 40, 15, 0.9);
+                border: 1px solid #3d8b3d;
+                border-radius: 12px;
+                padding: 0.75rem 0.5rem;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                gap: 0.35rem;
+            }
+
+            .base-info-label {
+                font-size: 0.72rem;
+                color: #a8d5a8 !important;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+            }
+
+            .base-info-value {
+                font-size: 0.95rem;
+                font-weight: 700;
+                color: #ffffff !important;
+                line-height: 1.2;
+            }
+
+            /* Timer display */
+            .timer-display {
+                background: rgba(0, 0, 0, 0.45);
+                border: 2px solid #22c55e;
+                border-radius: 14px;
+                padding: 0.75rem 1rem;
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+
+            .timer-display.timer-urgent {
+                border-color: #ef4444;
+                background: rgba(80, 10, 10, 0.45);
+            }
+
+            .timer-label {
+                display: block;
+                font-size: 0.8rem;
+                color: #d4f0d4 !important;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+            }
+
+            .timer-value {
+                display: block;
+                font-size: 2rem;
+                font-weight: 800;
+                color: #6ee7a0 !important;
+            }
+
+            .timer-urgent .timer-value {
+                color: #f87171 !important;
+            }
+
             /* Text input */
             div[data-testid="stTextInput"] input {
                 font-size: 1.15rem !important;
@@ -382,6 +458,14 @@ def apply_custom_styles() -> None:
 
                 .score-value {
                     font-size: 2rem;
+                }
+
+                .base-info-row {
+                    grid-template-columns: 1fr;
+                }
+
+                .base-info-value {
+                    font-size: 1.05rem;
                 }
             }
         </style>
