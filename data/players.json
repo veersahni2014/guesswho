@@ -1,0 +1,1942 @@
+[
+  {
+    "name": "Lionel Messi",
+    "alternate_names": [
+      "messi",
+      "leo messi"
+    ],
+    "nationality": "Argentina",
+    "position": "Forward",
+    "clubs": [
+      "Barcelona",
+      "Paris Saint-Germain",
+      "Inter Miami"
+    ],
+    "birth_year": 1987,
+    "world_cup_winner": true,
+    "ballon_dor_wins": 8,
+    "info": "Messi won the 2022 FIFA World Cup with Argentina and is widely regarded as one of the greatest players of all time.",
+    "clues": {
+      "easy": [
+        "I am from Argentina.",
+        "I won the FIFA World Cup.",
+        "I spent most of my career at Barcelona."
+      ],
+      "medium": [
+        "I have won the Ballon d'Or multiple times.",
+        "I later played in MLS.",
+        "I wore number 10 for Argentina."
+      ],
+      "hard": [
+        "I made my senior debut for Barcelona in 2004.",
+        "I scored in the 2022 World Cup final.",
+        "I became Argentina's all-time leading scorer."
+      ]
+    }
+  },
+  {
+    "name": "Cristiano Ronaldo",
+    "alternate_names": [
+      "cr7",
+      "cristiano"
+    ],
+    "nationality": "Portugal",
+    "position": "Forward",
+    "clubs": [
+      "Sporting CP",
+      "Manchester United",
+      "Real Madrid",
+      "Juventus",
+      "Al Nassr"
+    ],
+    "birth_year": 1985,
+    "world_cup_winner": false,
+    "ballon_dor_wins": 5,
+    "info": "Ronaldo is Portugal's all-time top scorer and the men's international football record goal scorer.",
+    "clues": {
+      "easy": [
+        "I am from Portugal.",
+        "I played for Real Madrid.",
+        "I am famous for powerful shooting and free kicks."
+      ],
+      "medium": [
+        "I have won multiple Champions League titles.",
+        "I returned to Manchester United before moving to Saudi Arabia.",
+        "I wore number 7 at several top clubs."
+      ],
+      "hard": [
+        "I made my Manchester United debut in 2003.",
+        "I scored a hat-trick against Spain at the 2018 World Cup.",
+        "I won the European Championship with Portugal in 2016."
+      ]
+    }
+  },
+  {
+    "name": "Neymar",
+    "alternate_names": [
+      "neymar jr"
+    ],
+    "nationality": "Brazil",
+    "position": "Forward",
+    "clubs": [
+      "Santos",
+      "Barcelona",
+      "Paris Saint-Germain",
+      "Al Hilal"
+    ],
+    "birth_year": 1992,
+    "world_cup_winner": false,
+    "ballon_dor_wins": 0,
+    "info": "Neymar rose to fame at Santos and became one of Brazil's most skillful modern forwards.",
+    "clues": {
+      "easy": [
+        "I am from Brazil.",
+        "I played for Barcelona and PSG.",
+        "I am known for flair and dribbling."
+      ],
+      "medium": [
+        "I started my career at Santos.",
+        "I formed part of MSN at Barcelona.",
+        "I became Brazil's all-time top scorer in 2023."
+      ],
+      "hard": [
+        "I won Olympic gold with Brazil in 2016.",
+        "I moved to Paris for a world-record fee in 2017.",
+        "I suffered an injury in the 2014 World Cup quarter-final."
+      ]
+    }
+  },
+  {
+    "name": "Kylian Mbappé",
+    "alternate_names": [
+      "mbappe",
+      "kylian mbappe"
+    ],
+    "nationality": "France",
+    "position": "Forward",
+    "clubs": [
+      "AS Monaco",
+      "Paris Saint-Germain",
+      "Real Madrid"
+    ],
+    "birth_year": 1998,
+    "world_cup_winner": true,
+    "ballon_dor_wins": 0,
+    "info": "Mbappé scored in the 2018 World Cup final as France won the tournament as a teenager.",
+    "clues": {
+      "easy": [
+        "I am from France.",
+        "I won the FIFA World Cup.",
+        "I am known for explosive pace."
+      ],
+      "medium": [
+        "I broke through at AS Monaco.",
+        "I spent many years at Paris Saint-Germain.",
+        "I scored a hat-trick in a World Cup final."
+      ],
+      "hard": [
+        "I made my Monaco debut in 2015.",
+        "I joined Real Madrid in 2024.",
+        "I scored four goals in a single World Cup final match in 2022."
+      ]
+    }
+  },
+  {
+    "name": "Erling Haaland",
+    "alternate_names": [
+      "haaland"
+    ],
+    "nationality": "Norway",
+    "position": "Forward",
+    "clubs": [
+      "Bryne",
+      "Molde",
+      "Red Bull Salzburg",
+      "Borussia Dortmund",
+      "Manchester City"
+    ],
+    "birth_year": 2000,
+    "world_cup_winner": false,
+    "ballon_dor_wins": 0,
+    "info": "Haaland is known for his incredible goal-scoring rate in the Premier League and Champions League.",
+    "clues": {
+      "easy": [
+        "I am from Norway.",
+        "I play as a striker.",
+        "I played for Manchester City."
+      ],
+      "medium": [
+        "I scored many goals for Borussia Dortmund.",
+        "My father also played professional football.",
+        "I am very tall and powerful in the box."
+      ],
+      "hard": [
+        "I scored a hat-trick on my Champions League debut for Salzburg.",
+        "I won the Premier League Golden Boot in my first season in England.",
+        "I was born in Leeds while my father played there."
+      ]
+    }
+  },
+  {
+    "name": "Mohamed Salah",
+    "alternate_names": [
+      "salah",
+      "mo salah"
+    ],
+    "nationality": "Egypt",
+    "position": "Forward",
+    "clubs": [
+      "Al Mokawloon",
+      "Basel",
+      "Chelsea",
+      "Fiorentina",
+      "Roma",
+      "Liverpool"
+    ],
+    "birth_year": 1992,
+    "world_cup_winner": false,
+    "ballon_dor_wins": 0,
+    "info": "Salah is Egypt's all-time leading scorer and a Liverpool legend.",
+    "clues": {
+      "easy": [
+        "I am from Egypt.",
+        "I play on the wing.",
+        "I became a star at Liverpool."
+      ],
+      "medium": [
+        "I also played for Roma and Chelsea.",
+        "I am known for cutting inside on my left foot.",
+        "I won the Premier League Golden Boot multiple times."
+      ],
+      "hard": [
+        "I scored 44 goals in all competitions in the 2017-18 season.",
+        "I left Basel for Chelsea in 2014.",
+        "I helped Liverpool win the Champions League in 2019."
+      ]
+    }
+  },
+  {
+    "name": "Kevin De Bruyne",
+    "alternate_names": [
+      "de bruyne",
+      "kdb"
+    ],
+    "nationality": "Belgium",
+    "position": "Midfielder",
+    "clubs": [
+      "Genk",
+      "Chelsea",
+      "Werder Bremen",
+      "VfL Wolfsburg",
+      "Manchester City"
+    ],
+    "birth_year": 1991,
+    "world_cup_winner": false,
+    "ballon_dor_wins": 0,
+    "info": "De Bruyne is regarded as one of the best playmakers of his generation.",
+    "clues": {
+      "easy": [
+        "I am from Belgium.",
+        "I am a midfielder.",
+        "I played for Manchester City."
+      ],
+      "medium": [
+        "I am known for assists and long-range passing.",
+        "I also played for Wolfsburg in Germany.",
+        "I wore number 17 at Manchester City."
+      ],
+      "hard": [
+        "I was sold by Chelsea before establishing myself at Wolfsburg.",
+        "I provided two assists in an FA Cup final.",
+        "I won multiple Premier League Player of the Season awards."
+      ]
+    }
+  },
+  {
+    "name": "Vinícius Júnior",
+    "alternate_names": [
+      "vinicius junior",
+      "vinicius"
+    ],
+    "nationality": "Brazil",
+    "position": "Forward",
+    "clubs": [
+      "Flamengo",
+      "Real Madrid"
+    ],
+    "birth_year": 2000,
+    "world_cup_winner": false,
+    "ballon_dor_wins": 0,
+    "info": "Vinícius became a key player for Real Madrid and scored in a Champions League final.",
+    "clues": {
+      "easy": [
+        "I am from Brazil.",
+        "I play for Real Madrid.",
+        "I am a fast winger."
+      ],
+      "medium": [
+        "I joined Real Madrid from Flamengo as a teenager.",
+        "I wear number 7 for Real Madrid.",
+        "I scored in the 2022 Champions League final."
+      ],
+      "hard": [
+        "Real Madrid signed me before I turned 18.",
+        "I won the Champions League multiple times with Madrid.",
+        "I was named in the FIFA FIFPro World XI in my early twenties."
+      ]
+    }
+  },
+  {
+    "name": "Jude Bellingham",
+    "alternate_names": [
+      "bellingham"
+    ],
+    "nationality": "England",
+    "position": "Midfielder",
+    "clubs": [
+      "Birmingham City",
+      "Borussia Dortmund",
+      "Real Madrid"
+    ],
+    "birth_year": 2003,
+    "world_cup_winner": false,
+    "ballon_dor_wins": 0,
+    "info": "Bellingham became one of the world's best young midfielders at Real Madrid.",
+    "clues": {
+      "easy": [
+        "I am from England.",
+        "I play as a midfielder.",
+        "I joined Real Madrid from Borussia Dortmund."
+      ],
+      "medium": [
+        "I made my professional debut at Birmingham City as a teenager.",
+        "I wore number 22 at Real Madrid.",
+        "I scored on my La Liga debut for Madrid."
+      ],
+      "hard": [
+        "I became Birmingham City's youngest-ever first-team player at 16.",
+        "I won the Kopa Trophy for best young player.",
+        "I scored in my first El Clásico for Real Madrid."
+      ]
+    }
+  },
+  {
+    "name": "Harry Kane",
+    "alternate_names": [
+      "kane"
+    ],
+    "nationality": "England",
+    "position": "Forward",
+    "clubs": [
+      "Tottenham Hotspur",
+      "Bayern Munich"
+    ],
+    "birth_year": 1993,
+    "world_cup_winner": false,
+    "ballon_dor_wins": 0,
+    "info": "Kane is England's all-time top scorer in men's international football.",
+    "clues": {
+      "easy": [
+        "I am from England.",
+        "I am a striker.",
+        "I spent most of my career at Tottenham."
+      ],
+      "medium": [
+        "I won the World Cup Golden Boot in 2018.",
+        "I later moved to Bayern Munich.",
+        "I am known for link-up play, not just finishing."
+      ],
+      "hard": [
+        "I scored on my England debut in 2015.",
+        "I became Tottenham's all-time top scorer.",
+        "I made my Tottenham first-team debut in the Europa League in 2011."
+      ]
+    }
+  },
+  {
+    "name": "Robert Lewandowski",
+    "alternate_names": [
+      "lewandowski",
+      "lewa"
+    ],
+    "nationality": "Poland",
+    "position": "Forward",
+    "clubs": [
+      "Lech Poznań",
+      "Borussia Dortmund",
+      "Bayern Munich",
+      "Barcelona"
+    ],
+    "birth_year": 1988,
+    "world_cup_winner": false,
+    "ballon_dor_wins": 0,
+    "info": "Lewandowski is Poland's all-time top scorer and one of the most prolific strikers in Bundesliga history.",
+    "clues": {
+      "easy": [
+        "I am from Poland.",
+        "I am a striker.",
+        "I played for Bayern Munich."
+      ],
+      "medium": [
+        "I also played for Borussia Dortmund.",
+        "I later joined Barcelona.",
+        "I am known for finishing with both feet and my head."
+      ],
+      "hard": [
+        "I scored five goals in nine minutes for Bayern against Wolfsburg.",
+        "I won the FIFA Best Men's Player award in 2020 and 2021.",
+        "I broke Gerd Müller's Bundesliga single-season goal record."
+      ]
+    }
+  },
+  {
+    "name": "Lamine Yamal",
+    "alternate_names": [
+      "yamal"
+    ],
+    "nationality": "Spain",
+    "position": "Forward",
+    "clubs": [
+      "Barcelona"
+    ],
+    "birth_year": 2007,
+    "world_cup_winner": false,
+    "ballon_dor_wins": 0,
+    "info": "Yamal became one of the youngest stars in European football while playing for Barcelona and Spain.",
+    "clues": {
+      "easy": [
+        "I am from Spain.",
+        "I play for Barcelona.",
+        "I am a very young winger."
+      ],
+      "medium": [
+        "I helped Spain win UEFA Euro 2024.",
+        "I made my Barcelona debut as a teenager.",
+        "I wear a low squad number at Barcelona."
+      ],
+      "hard": [
+        "I was born in 2007.",
+        "I scored at Euro 2024 before turning 17.",
+        "I became the youngest goalscorer in European Championship history."
+      ]
+    }
+  },
+  {
+    "name": "Ronaldinho",
+    "alternate_names": [
+      "ronaldinho gaucho"
+    ],
+    "nationality": "Brazil",
+    "position": "Attacking Midfielder",
+    "clubs": [
+      "Grêmio",
+      "Paris Saint-Germain",
+      "Barcelona",
+      "AC Milan",
+      "Flamengo",
+      "Atlético Mineiro"
+    ],
+    "birth_year": 1980,
+    "world_cup_winner": true,
+    "ballon_dor_wins": 2,
+    "info": "Ronaldinho dazzled fans with skill and creativity, especially during his time at Barcelona.",
+    "clues": {
+      "easy": [
+        "I am from Brazil.",
+        "I won the FIFA World Cup.",
+        "I played for Barcelona."
+      ],
+      "medium": [
+        "I won the Ballon d'Or twice.",
+        "I am famous for the no-look pass and elastico.",
+        "I also played for AC Milan."
+      ],
+      "hard": [
+        "I won the 2002 World Cup alongside Ronaldo and Rivaldo.",
+        "I scored a famous free kick against England in 2002.",
+        "I won the Champions League with Barcelona in 2006."
+      ]
+    }
+  },
+  {
+    "name": "Zinedine Zidane",
+    "alternate_names": [
+      "zidane",
+      "zizou"
+    ],
+    "nationality": "France",
+    "position": "Midfielder",
+    "clubs": [
+      "Cannes",
+      "Bordeaux",
+      "Juventus",
+      "Real Madrid"
+    ],
+    "birth_year": 1972,
+    "world_cup_winner": true,
+    "ballon_dor_wins": 1,
+    "info": "Zidane scored twice in the 1998 World Cup final and later managed Real Madrid to three Champions League titles.",
+    "clues": {
+      "easy": [
+        "I am from France.",
+        "I won the FIFA World Cup.",
+        "I played for Real Madrid."
+      ],
+      "medium": [
+        "I won the Ballon d'Or in 1998.",
+        "I also played for Juventus.",
+        "I am known for elegance and close control."
+      ],
+      "hard": [
+        "I scored two headers in the 1998 World Cup final.",
+        "I was sent off in the 2006 World Cup final.",
+        "I later coached Real Madrid to three consecutive Champions League titles."
+      ]
+    }
+  },
+  {
+    "name": "Thierry Henry",
+    "alternate_names": [
+      "henry"
+    ],
+    "nationality": "France",
+    "position": "Forward",
+    "clubs": [
+      "Monaco",
+      "Juventus",
+      "Arsenal",
+      "Barcelona",
+      "New York Red Bulls"
+    ],
+    "birth_year": 1977,
+    "world_cup_winner": true,
+    "ballon_dor_wins": 0,
+    "info": "Henry is Arsenal's all-time top scorer and one of the Premier League's greatest forwards.",
+    "clues": {
+      "easy": [
+        "I am from France.",
+        "I played for Arsenal.",
+        "I won the FIFA World Cup."
+      ],
+      "medium": [
+        "I later played for Barcelona.",
+        "I wore number 14 at Arsenal.",
+        "I was known for finishing after cutting in from the left."
+      ],
+      "hard": [
+        "I won the Premier League Golden Boot multiple times.",
+        "I was part of France's 1998 World Cup-winning squad.",
+        "I scored over 200 goals for Arsenal."
+      ]
+    }
+  },
+  {
+    "name": "Ronaldo Nazário",
+    "alternate_names": [
+      "ronaldo",
+      "r9",
+      "ronaldo nazario"
+    ],
+    "nationality": "Brazil",
+    "position": "Forward",
+    "clubs": [
+      "Cruzeiro",
+      "PSV",
+      "Barcelona",
+      "Inter Milan",
+      "Real Madrid",
+      "AC Milan",
+      "Corinthians"
+    ],
+    "birth_year": 1976,
+    "world_cup_winner": true,
+    "ballon_dor_wins": 2,
+    "info": "Ronaldo Nazário is considered one of the greatest strikers ever and won two World Cups with Brazil.",
+    "clues": {
+      "easy": [
+        "I am from Brazil.",
+        "I won the FIFA World Cup twice.",
+        "I played for Real Madrid and Barcelona."
+      ],
+      "medium": [
+        "I won the Ballon d'Or twice.",
+        "I wore number 9 for Brazil.",
+        "I also played for Inter Milan."
+      ],
+      "hard": [
+        "I scored twice in the 2002 World Cup final.",
+        "I overcame serious knee injuries in my career.",
+        "I won the World Cup in 1994 without playing a minute in the final tournament."
+      ]
+    }
+  },
+  {
+    "name": "Pelé",
+    "alternate_names": [
+      "pele"
+    ],
+    "nationality": "Brazil",
+    "position": "Forward",
+    "clubs": [
+      "Santos",
+      "New York Cosmos"
+    ],
+    "birth_year": 1940,
+    "world_cup_winner": true,
+    "ballon_dor_wins": 0,
+    "info": "Pelé won three FIFA World Cups with Brazil and is one of football's most iconic figures.",
+    "clues": {
+      "easy": [
+        "I am from Brazil.",
+        "I won the FIFA World Cup three times.",
+        "I spent most of my career at Santos."
+      ],
+      "medium": [
+        "I played in the North American Soccer League.",
+        "I am often called the King of Football.",
+        "I scored over 1,000 career goals by some counts."
+      ],
+      "hard": [
+        "I won my first World Cup in 1958 as a teenager.",
+        "I scored a hat-trick in a World Cup semi-final as a 17-year-old.",
+        "I finished my club career with the New York Cosmos."
+      ]
+    }
+  },
+  {
+    "name": "Diego Maradona",
+    "alternate_names": [
+      "maradona"
+    ],
+    "nationality": "Argentina",
+    "position": "Attacking Midfielder",
+    "clubs": [
+      "Argentinos Juniors",
+      "Boca Juniors",
+      "Barcelona",
+      "Napoli",
+      "Sevilla"
+    ],
+    "birth_year": 1960,
+    "world_cup_winner": true,
+    "ballon_dor_wins": 0,
+    "info": "Maradona led Argentina to World Cup glory in 1986 and became a legend at Napoli.",
+    "clues": {
+      "easy": [
+        "I am from Argentina.",
+        "I won the FIFA World Cup.",
+        "I became a hero at Napoli."
+      ],
+      "medium": [
+        "I also played for Barcelona.",
+        "I wore number 10 for Argentina.",
+        "I am famous for the Hand of God goal."
+      ],
+      "hard": [
+        "I scored the Goal of the Century against England in 1986.",
+        "I won two Serie A titles with Napoli.",
+        "I captained Argentina to the 1986 World Cup title."
+      ]
+    }
+  },
+  {
+    "name": "Andrés Iniesta",
+    "alternate_names": [
+      "iniesta",
+      "andres iniesta"
+    ],
+    "nationality": "Spain",
+    "position": "Midfielder",
+    "clubs": [
+      "Barcelona",
+      "Vissel Kobe"
+    ],
+    "birth_year": 1984,
+    "world_cup_winner": true,
+    "ballon_dor_wins": 0,
+    "info": "Iniesta scored the winning goal in the 2010 World Cup final for Spain.",
+    "clues": {
+      "easy": [
+        "I am from Spain.",
+        "I won the FIFA World Cup.",
+        "I spent most of my career at Barcelona."
+      ],
+      "medium": [
+        "I was part of Spain's golden generation.",
+        "I later played in Japan.",
+        "I am known for close control and composure."
+      ],
+      "hard": [
+        "I scored the winning goal in the 2010 World Cup final.",
+        "I won the UEFA European Championship in 2008 and 2012.",
+        "I spent over 20 years at Barcelona."
+      ]
+    }
+  },
+  {
+    "name": "Xavi",
+    "alternate_names": [
+      "xavi hernandez"
+    ],
+    "nationality": "Spain",
+    "position": "Midfielder",
+    "clubs": [
+      "Barcelona",
+      "Al Sadd"
+    ],
+    "birth_year": 1980,
+    "world_cup_winner": true,
+    "ballon_dor_wins": 0,
+    "info": "Xavi controlled games from midfield and later managed Barcelona.",
+    "clues": {
+      "easy": [
+        "I am from Spain.",
+        "I won the FIFA World Cup.",
+        "I played my entire senior club career at Barcelona until leaving for Qatar."
+      ],
+      "medium": [
+        "I was known for short passing and dictating tempo.",
+        "I later became a manager.",
+        "I won the Champions League multiple times."
+      ],
+      "hard": [
+        "I finished third in the Ballon d'Or in 2010.",
+        "I made over 700 appearances for Barcelona.",
+        "I coached Barcelona after retiring as a player."
+      ]
+    }
+  },
+  {
+    "name": "Sergio Ramos",
+    "alternate_names": [
+      "ramos"
+    ],
+    "nationality": "Spain",
+    "position": "Defender",
+    "clubs": [
+      "Sevilla",
+      "Real Madrid",
+      "Paris Saint-Germain"
+    ],
+    "birth_year": 1986,
+    "world_cup_winner": true,
+    "ballon_dor_wins": 0,
+    "info": "Ramos scored crucial goals as a defender and won numerous trophies with Real Madrid.",
+    "clues": {
+      "easy": [
+        "I am from Spain.",
+        "I am a defender.",
+        "I played for Real Madrid for many years."
+      ],
+      "medium": [
+        "I won the FIFA World Cup with Spain in 2010.",
+        "I am known for scoring important headers.",
+        "I later played for Paris Saint-Germain."
+      ],
+      "hard": [
+        "I scored in a Champions League final.",
+        "I won the European Championship in 2008 and 2012.",
+        "I made over 600 appearances for Real Madrid."
+      ]
+    }
+  },
+  {
+    "name": "Luka Modrić",
+    "alternate_names": [
+      "modric",
+      "luka modric"
+    ],
+    "nationality": "Croatia",
+    "position": "Midfielder",
+    "clubs": [
+      "Dinamo Zagreb",
+      "Tottenham Hotspur",
+      "Real Madrid"
+    ],
+    "birth_year": 1985,
+    "world_cup_winner": false,
+    "ballon_dor_wins": 1,
+    "info": "Modrić won the Ballon d'Or in 2018 and led Croatia to the World Cup final.",
+    "clues": {
+      "easy": [
+        "I am from Croatia.",
+        "I am a midfielder.",
+        "I played for Real Madrid."
+      ],
+      "medium": [
+        "I won the Ballon d'Or in 2018.",
+        "I also played for Tottenham.",
+        "I am known for vision and passing."
+      ],
+      "hard": [
+        "I captained Croatia to the 2018 World Cup final.",
+        "I won the Champions League multiple times with Real Madrid.",
+        "I won the Golden Ball at the 2018 World Cup."
+      ]
+    }
+  },
+  {
+    "name": "David Beckham",
+    "alternate_names": [
+      "beckham"
+    ],
+    "nationality": "England",
+    "position": "Midfielder",
+    "clubs": [
+      "Manchester United",
+      "Real Madrid",
+      "LA Galaxy",
+      "AC Milan",
+      "Paris Saint-Germain"
+    ],
+    "birth_year": 1975,
+    "world_cup_winner": false,
+    "ballon_dor_wins": 0,
+    "info": "Beckham became a global icon for his crossing, free kicks, and fame beyond football.",
+    "clues": {
+      "easy": [
+        "I am from England.",
+        "I played for Manchester United.",
+        "I am famous for free kicks and crossing."
+      ],
+      "medium": [
+        "I also played for Real Madrid.",
+        "I later played in MLS for LA Galaxy.",
+        "I wore number 7 for England."
+      ],
+      "hard": [
+        "I scored from the halfway line against Wimbledon in 1996.",
+        "I won the treble with Manchester United in 1999.",
+        "I finished my playing career at Paris Saint-Germain."
+      ]
+    }
+  },
+  {
+    "name": "Wayne Rooney",
+    "alternate_names": [
+      "rooney"
+    ],
+    "nationality": "England",
+    "position": "Forward",
+    "clubs": [
+      "Everton",
+      "Manchester United",
+      "DC United",
+      "Derby County"
+    ],
+    "birth_year": 1985,
+    "world_cup_winner": false,
+    "ballon_dor_wins": 0,
+    "info": "Rooney is Manchester United's all-time top scorer and an England great.",
+    "clues": {
+      "easy": [
+        "I am from England.",
+        "I played for Manchester United.",
+        "I started my career at Everton."
+      ],
+      "medium": [
+        "I became United's all-time top scorer.",
+        "I later played in MLS.",
+        "I could play as a forward or midfielder."
+      ],
+      "hard": [
+        "I scored a famous volley against Newcastle in 2005.",
+        "I made my Everton debut at 16.",
+        "I won the Champions League with Manchester United in 2008."
+      ]
+    }
+  },
+  {
+    "name": "Zlatan Ibrahimović",
+    "alternate_names": [
+      "zlatan",
+      "ibrahimovic",
+      "ibra"
+    ],
+    "nationality": "Sweden",
+    "position": "Forward",
+    "clubs": [
+      "Malmö FF",
+      "Ajax",
+      "Juventus",
+      "Inter Milan",
+      "Barcelona",
+      "AC Milan",
+      "Paris Saint-Germain",
+      "Manchester United",
+      "LA Galaxy"
+    ],
+    "birth_year": 1981,
+    "world_cup_winner": false,
+    "ballon_dor_wins": 0,
+    "info": "Zlatan played for many of Europe's biggest clubs and is famous for spectacular goals.",
+    "clues": {
+      "easy": [
+        "I am from Sweden.",
+        "I am a striker.",
+        "I played for many top European clubs."
+      ],
+      "medium": [
+        "I won league titles in four countries.",
+        "I played for Paris Saint-Germain and Manchester United.",
+        "I am known for confidence and acrobatic goals."
+      ],
+      "hard": [
+        "I scored a famous bicycle kick from distance for Sweden against England.",
+        "I won Serie A with three different clubs.",
+        "I scored over 500 career club goals."
+      ]
+    }
+  },
+  {
+    "name": "Manuel Neuer",
+    "alternate_names": [
+      "neuer"
+    ],
+    "nationality": "Germany",
+    "position": "Goalkeeper",
+    "clubs": [
+      "Schalke 04",
+      "Bayern Munich"
+    ],
+    "birth_year": 1986,
+    "world_cup_winner": true,
+    "ballon_dor_wins": 0,
+    "info": "Neuer revolutionized goalkeeping with his sweeper-keeper style and won the 2014 World Cup.",
+    "clues": {
+      "easy": [
+        "I am from Germany.",
+        "I am a goalkeeper.",
+        "I played for Bayern Munich."
+      ],
+      "medium": [
+        "I won the FIFA World Cup in 2014.",
+        "I am known for playing high off my line.",
+        "I also played for Schalke."
+      ],
+      "hard": [
+        "I finished third in the Ballon d'Or in 2014.",
+        "I captained Germany and Bayern Munich.",
+        "I won the Champions League with Bayern in 2013 and 2020."
+      ]
+    }
+  },
+  {
+    "name": "Gianluigi Buffon",
+    "alternate_names": [
+      "buffon"
+    ],
+    "nationality": "Italy",
+    "position": "Goalkeeper",
+    "clubs": [
+      "Parma",
+      "Juventus",
+      "Paris Saint-Germain"
+    ],
+    "birth_year": 1978,
+    "world_cup_winner": true,
+    "ballon_dor_wins": 0,
+    "info": "Buffon is one of the greatest goalkeepers ever and won the 2006 World Cup with Italy.",
+    "clues": {
+      "easy": [
+        "I am from Italy.",
+        "I am a goalkeeper.",
+        "I spent most of my career at Juventus."
+      ],
+      "medium": [
+        "I won the FIFA World Cup in 2006.",
+        "I briefly played for Paris Saint-Germain.",
+        "I also started at Parma."
+      ],
+      "hard": [
+        "I made over 1,000 professional appearances.",
+        "I kept a clean sheet for over 900 minutes in Serie A in one season.",
+        "I captained Italy and Juventus for many years."
+      ]
+    }
+  },
+  {
+    "name": "Paolo Maldini",
+    "alternate_names": [
+      "maldini"
+    ],
+    "nationality": "Italy",
+    "position": "Defender",
+    "clubs": [
+      "AC Milan"
+    ],
+    "birth_year": 1968,
+    "world_cup_winner": false,
+    "ballon_dor_wins": 0,
+    "info": "Maldini spent his entire career at AC Milan and is regarded as one of the finest defenders ever.",
+    "clues": {
+      "easy": [
+        "I am from Italy.",
+        "I am a defender.",
+        "I played my whole career at AC Milan."
+      ],
+      "medium": [
+        "I won the Champions League multiple times.",
+        "I wore number 3 for Milan.",
+        "My father also played for AC Milan."
+      ],
+      "hard": [
+        "I made over 900 appearances for AC Milan.",
+        "I played in four World Cups for Italy.",
+        "I finished third in the Ballon d'Or in 2003."
+      ]
+    }
+  },
+  {
+    "name": "Cafu",
+    "alternate_names": [
+      "marcos cafu"
+    ],
+    "nationality": "Brazil",
+    "position": "Defender",
+    "clubs": [
+      "São Paulo",
+      "Real Zaragoza",
+      "Palmeiras",
+      "Roma",
+      "AC Milan"
+    ],
+    "birth_year": 1970,
+    "world_cup_winner": true,
+    "ballon_dor_wins": 0,
+    "info": "Cafu is the only player to appear in three consecutive World Cup finals, winning two.",
+    "clues": {
+      "easy": [
+        "I am from Brazil.",
+        "I am a defender.",
+        "I won the FIFA World Cup twice."
+      ],
+      "medium": [
+        "I played for Roma and AC Milan.",
+        "I was known for overlapping runs on the right.",
+        "I captained Brazil to World Cup glory."
+      ],
+      "hard": [
+        "I played in three World Cup finals.",
+        "I won Serie A and the Champions League with AC Milan.",
+        "I won the 1994 and 2002 World Cups."
+      ]
+    }
+  },
+  {
+    "name": "Roberto Carlos",
+    "alternate_names": [
+      "roberto carlos"
+    ],
+    "nationality": "Brazil",
+    "position": "Defender",
+    "clubs": [
+      "União São João",
+      "Palmeiras",
+      "Inter Milan",
+      "Real Madrid",
+      "Fenerbahçe"
+    ],
+    "birth_year": 1973,
+    "world_cup_winner": true,
+    "ballon_dor_wins": 0,
+    "info": "Roberto Carlos was famous for his powerful left foot and played for Real Madrid for 11 years.",
+    "clues": {
+      "easy": [
+        "I am from Brazil.",
+        "I am a left-back.",
+        "I played for Real Madrid."
+      ],
+      "medium": [
+        "I won the FIFA World Cup in 2002.",
+        "I am known for thunderous free kicks.",
+        "I won the Champions League multiple times."
+      ],
+      "hard": [
+        "I scored a famous bending free kick against France in 1997.",
+        "I was part of Real Madrid's Galácticos era.",
+        "I also played for Inter Milan early in my career."
+      ]
+    }
+  },
+  {
+    "name": "Andrea Pirlo",
+    "alternate_names": [
+      "pirlo"
+    ],
+    "nationality": "Italy",
+    "position": "Midfielder",
+    "clubs": [
+      "Brescia",
+      "Inter Milan",
+      "AC Milan",
+      "Juventus",
+      "New York City FC"
+    ],
+    "birth_year": 1979,
+    "world_cup_winner": true,
+    "ballon_dor_wins": 0,
+    "info": "Pirlo was a master of passing and free kicks and won the 2006 World Cup with Italy.",
+    "clues": {
+      "easy": [
+        "I am from Italy.",
+        "I am a midfielder.",
+        "I won the FIFA World Cup."
+      ],
+      "medium": [
+        "I played for AC Milan and Juventus.",
+        "I am known for deep-lying playmaking.",
+        "I scored many goals from free kicks."
+      ],
+      "hard": [
+        "I won the Champions League twice with AC Milan.",
+        "I later played in MLS for New York City FC.",
+        "I converted a decisive penalty in a World Cup quarter-final shootout in 2006."
+      ]
+    }
+  },
+  {
+    "name": "Steven Gerrard",
+    "alternate_names": [
+      "gerrard"
+    ],
+    "nationality": "England",
+    "position": "Midfielder",
+    "clubs": [
+      "Liverpool",
+      "LA Galaxy"
+    ],
+    "birth_year": 1980,
+    "world_cup_winner": false,
+    "ballon_dor_wins": 0,
+    "info": "Gerrard is a Liverpool legend known for big goals and leadership from midfield.",
+    "clues": {
+      "easy": [
+        "I am from England.",
+        "I played for Liverpool.",
+        "I was a midfielder and captain."
+      ],
+      "medium": [
+        "I scored in a Champions League final.",
+        "I later played in MLS.",
+        "I am known for long-range shooting."
+      ],
+      "hard": [
+        "I won the Champions League in 2005 after being 3-0 down.",
+        "I made over 700 appearances for Liverpool.",
+        "I scored a famous last-minute goal against Olympiakos in 2004."
+      ]
+    }
+  },
+  {
+    "name": "Frank Lampard",
+    "alternate_names": [
+      "lampard"
+    ],
+    "nationality": "England",
+    "position": "Midfielder",
+    "clubs": [
+      "West Ham United",
+      "Chelsea",
+      "Manchester City",
+      "New York City FC"
+    ],
+    "birth_year": 1978,
+    "world_cup_winner": false,
+    "ballon_dor_wins": 0,
+    "info": "Lampard is Chelsea's all-time top scorer despite playing as a midfielder.",
+    "clues": {
+      "easy": [
+        "I am from England.",
+        "I played for Chelsea.",
+        "I scored goals from midfield."
+      ],
+      "medium": [
+        "I won the Champions League with Chelsea.",
+        "I later managed in the Premier League.",
+        "I also played for West Ham early in my career."
+      ],
+      "hard": [
+        "I scored over 200 goals for Chelsea.",
+        "I won three Premier League titles with Chelsea.",
+        "I finished second in the Ballon d'Or in 2005."
+      ]
+    }
+  },
+  {
+    "name": "Kaká",
+    "alternate_names": [
+      "kaka"
+    ],
+    "nationality": "Brazil",
+    "position": "Attacking Midfielder",
+    "clubs": [
+      "São Paulo",
+      "AC Milan",
+      "Real Madrid",
+      "Orlando City"
+    ],
+    "birth_year": 1982,
+    "world_cup_winner": true,
+    "ballon_dor_wins": 1,
+    "info": "Kaká won the Ballon d'Or in 2007 and was one of the best players of his era.",
+    "clues": {
+      "easy": [
+        "I am from Brazil.",
+        "I won the FIFA World Cup.",
+        "I played for AC Milan."
+      ],
+      "medium": [
+        "I won the Ballon d'Or in 2007.",
+        "I later played for Real Madrid.",
+        "I am known for dribbling at speed."
+      ],
+      "hard": [
+        "I won the Champions League with AC Milan in 2007.",
+        "I finished my club career in MLS with Orlando City.",
+        "I won the World Cup with Brazil in 2002."
+      ]
+    }
+  },
+  {
+    "name": "Samuel Eto'o",
+    "alternate_names": [
+      "etoo",
+      "eto'o"
+    ],
+    "nationality": "Cameroon",
+    "position": "Forward",
+    "clubs": [
+      "Real Madrid",
+      "Mallorca",
+      "Barcelona",
+      "Inter Milan",
+      "Chelsea"
+    ],
+    "birth_year": 1981,
+    "world_cup_winner": false,
+    "ballon_dor_wins": 0,
+    "info": "Eto'o won the Champions League with Barcelona and Inter Milan and is a Cameroon legend.",
+    "clues": {
+      "easy": [
+        "I am from Cameroon.",
+        "I am a striker.",
+        "I played for Barcelona."
+      ],
+      "medium": [
+        "I also played for Inter Milan.",
+        "I won the Champions League with two different clubs.",
+        "I won Olympic gold with Cameroon in 2000."
+      ],
+      "hard": [
+        "I won a historic treble with Inter Milan in 2010.",
+        "I scored in two Champions League finals.",
+        "I won the African Cup of Nations twice with Cameroon."
+      ]
+    }
+  },
+  {
+    "name": "Didier Drogba",
+    "alternate_names": [
+      "drogba"
+    ],
+    "nationality": "Ivory Coast",
+    "position": "Forward",
+    "clubs": [
+      "Le Mans",
+      "Guingamp",
+      "Marseille",
+      "Chelsea",
+      "Shanghai Shenhua",
+      "Galatasaray"
+    ],
+    "birth_year": 1978,
+    "world_cup_winner": false,
+    "ballon_dor_wins": 0,
+    "info": "Drogba is Chelsea's greatest African player and scored in a Champions League final.",
+    "clues": {
+      "easy": [
+        "I am from Ivory Coast.",
+        "I am a striker.",
+        "I became a Chelsea legend."
+      ],
+      "medium": [
+        "I scored in a Champions League final.",
+        "I am known for strength and big-game goals.",
+        "I also played for Marseille."
+      ],
+      "hard": [
+        "I scored the equalizer and winning penalty in the 2012 Champions League final.",
+        "I won four Premier League titles with Chelsea.",
+        "I am Ivory Coast's all-time top scorer."
+      ]
+    }
+  },
+  {
+    "name": "Luis Suárez",
+    "alternate_names": [
+      "suarez",
+      "luis suarez"
+    ],
+    "nationality": "Uruguay",
+    "position": "Forward",
+    "clubs": [
+      "Nacional",
+      "Groningen",
+      "Ajax",
+      "Liverpool",
+      "Barcelona",
+      "Atlético Madrid",
+      "Grêmio",
+      "Inter Miami"
+    ],
+    "birth_year": 1987,
+    "world_cup_winner": false,
+    "ballon_dor_wins": 0,
+    "info": "Suárez is Uruguay's all-time top scorer and won many trophies with Barcelona.",
+    "clues": {
+      "easy": [
+        "I am from Uruguay.",
+        "I am a striker.",
+        "I played for Liverpool and Barcelona."
+      ],
+      "medium": [
+        "I won the Champions League with Barcelona.",
+        "I formed a famous attacking trio at Barcelona.",
+        "I also played for Ajax."
+      ],
+      "hard": [
+        "I won the Premier League Golden Boot at Liverpool.",
+        "I scored over 400 career club goals.",
+        "I helped Uruguay reach the 2010 World Cup semi-finals."
+      ]
+    }
+  },
+  {
+    "name": "Sergio Agüero",
+    "alternate_names": [
+      "aguero",
+      "kun aguero"
+    ],
+    "nationality": "Argentina",
+    "position": "Forward",
+    "clubs": [
+      "Independiente",
+      "Atlético Madrid",
+      "Manchester City",
+      "Barcelona"
+    ],
+    "birth_year": 1988,
+    "world_cup_winner": true,
+    "ballon_dor_wins": 0,
+    "info": "Agüero scored Manchester City's most famous goal to win the 2012 Premier League title.",
+    "clues": {
+      "easy": [
+        "I am from Argentina.",
+        "I am a striker.",
+        "I played for Manchester City."
+      ],
+      "medium": [
+        "I won the FIFA World Cup with Argentina in 2022.",
+        "I also played for Atlético Madrid.",
+        "I am Manchester City's all-time top scorer."
+      ],
+      "hard": [
+        "I scored a last-minute title-winning goal against QPR in 2012.",
+        "I made my Argentina debut at 18.",
+        "I wore the number 10 shirt at Manchester City."
+      ]
+    }
+  },
+  {
+    "name": "Karim Benzema",
+    "alternate_names": [
+      "benzema"
+    ],
+    "nationality": "France",
+    "position": "Forward",
+    "clubs": [
+      "Olympique Lyonnais",
+      "Real Madrid",
+      "Al Ittihad"
+    ],
+    "birth_year": 1987,
+    "world_cup_winner": false,
+    "ballon_dor_wins": 1,
+    "info": "Benzema won the Ballon d'Or in 2022 and was Real Madrid's main striker for years.",
+    "clues": {
+      "easy": [
+        "I am from France.",
+        "I am a striker.",
+        "I played for Real Madrid."
+      ],
+      "medium": [
+        "I won the Ballon d'Or in 2022.",
+        "I started at Lyon.",
+        "I won multiple Champions League titles."
+      ],
+      "hard": [
+        "I scored in a Champions League final against Liverpool.",
+        "I later moved to Saudi Arabia.",
+        "I won the UEFA Nations League with France in 2021."
+      ]
+    }
+  },
+  {
+    "name": "Gareth Bale",
+    "alternate_names": [
+      "bale"
+    ],
+    "nationality": "Wales",
+    "position": "Forward",
+    "clubs": [
+      "Southampton",
+      "Tottenham Hotspur",
+      "Real Madrid",
+      "LAFC"
+    ],
+    "birth_year": 1989,
+    "world_cup_winner": false,
+    "ballon_dor_wins": 0,
+    "info": "Bale scored spectacular goals for Real Madrid and led Wales to a European Championship semi-final.",
+    "clues": {
+      "easy": [
+        "I am from Wales.",
+        "I play on the wing.",
+        "I played for Real Madrid."
+      ],
+      "medium": [
+        "I also played for Tottenham.",
+        "I am known for pace and powerful left-foot shots.",
+        "I won multiple Champions League titles."
+      ],
+      "hard": [
+        "I scored a famous overhead kick in a Champions League final.",
+        "I helped Wales reach the Euro 2016 semi-finals.",
+        "I won the PFA Young Player of the Year at Tottenham."
+      ]
+    }
+  },
+  {
+    "name": "N'Golo Kanté",
+    "alternate_names": [
+      "kante",
+      "ngolo kante"
+    ],
+    "nationality": "France",
+    "position": "Midfielder",
+    "clubs": [
+      "Boulogne",
+      "Caen",
+      "Leicester City",
+      "Chelsea",
+      "Al Ittihad"
+    ],
+    "birth_year": 1991,
+    "world_cup_winner": true,
+    "ballon_dor_wins": 0,
+    "info": "Kanté won the Premier League and World Cup and is famous for his tireless midfield work.",
+    "clues": {
+      "easy": [
+        "I am from France.",
+        "I am a midfielder.",
+        "I won the FIFA World Cup."
+      ],
+      "medium": [
+        "I won the Premier League with Leicester and Chelsea.",
+        "I am known for covering huge amounts of ground.",
+        "I played in midfield for Chelsea for many years."
+      ],
+      "hard": [
+        "I won the Champions League with Chelsea in 2021.",
+        "I was a key part of Leicester's title win in 2016.",
+        "I was named in the FIFPro World XI while at Chelsea."
+      ]
+    }
+  },
+  {
+    "name": "Virgil van Dijk",
+    "alternate_names": [
+      "van dijk",
+      "vvd"
+    ],
+    "nationality": "Netherlands",
+    "position": "Defender",
+    "clubs": [
+      "Groningen",
+      "Celtic",
+      "Southampton",
+      "Liverpool"
+    ],
+    "birth_year": 1991,
+    "world_cup_winner": false,
+    "ballon_dor_wins": 0,
+    "info": "Van Dijk is considered one of the best defenders of his generation and finished second in the 2019 Ballon d'Or.",
+    "clues": {
+      "easy": [
+        "I am from the Netherlands.",
+        "I am a centre-back.",
+        "I play for Liverpool."
+      ],
+      "medium": [
+        "I am known for aerial ability and composure.",
+        "I also played for Southampton.",
+        "I won the Premier League with Liverpool."
+      ],
+      "hard": [
+        "I finished second in the Ballon d'Or in 2019.",
+        "I won the Champions League with Liverpool in 2019.",
+        "I captained the Netherlands at international level."
+      ]
+    }
+  },
+  {
+    "name": "Rodri",
+    "alternate_names": [
+      "rodri hernandez"
+    ],
+    "nationality": "Spain",
+    "position": "Midfielder",
+    "clubs": [
+      "Villarreal",
+      "Atlético Madrid",
+      "Manchester City"
+    ],
+    "birth_year": 1996,
+    "world_cup_winner": false,
+    "ballon_dor_wins": 1,
+    "info": "Rodri won the Ballon d'Or in 2024 and was central to Manchester City's success.",
+    "clues": {
+      "easy": [
+        "I am from Spain.",
+        "I am a defensive midfielder.",
+        "I play for Manchester City."
+      ],
+      "medium": [
+        "I also played for Atlético Madrid.",
+        "I won the UEFA European Championship in 2024.",
+        "I am known for controlling games from deep."
+      ],
+      "hard": [
+        "I scored the winning goal in the 2023 Champions League final.",
+        "I won the Ballon d'Or in 2024.",
+        "I won four consecutive Premier League titles with Manchester City."
+      ]
+    }
+  },
+  {
+    "name": "Phil Foden",
+    "alternate_names": [
+      "foden"
+    ],
+    "nationality": "England",
+    "position": "Midfielder",
+    "clubs": [
+      "Manchester City"
+    ],
+    "birth_year": 2000,
+    "world_cup_winner": false,
+    "ballon_dor_wins": 0,
+    "info": "Foden came through Manchester City's academy and became one of England's best young talents.",
+    "clues": {
+      "easy": [
+        "I am from England.",
+        "I play for Manchester City.",
+        "I am a skilful attacking midfielder."
+      ],
+      "medium": [
+        "I came through City's youth academy.",
+        "I won multiple Premier League titles.",
+        "I wear a low squad number at City."
+      ],
+      "hard": [
+        "I was named Premier League Young Player of the Season multiple times.",
+        "I won the FIFA Club World Cup with Manchester City.",
+        "I made my City debut under Pep Guardiola as a teenager."
+      ]
+    }
+  },
+  {
+    "name": "Bukayo Saka",
+    "alternate_names": [
+      "saka"
+    ],
+    "nationality": "England",
+    "position": "Forward",
+    "clubs": [
+      "Arsenal"
+    ],
+    "birth_year": 2001,
+    "world_cup_winner": false,
+    "ballon_dor_wins": 0,
+    "info": "Saka developed into one of Arsenal's most important players and an England regular.",
+    "clues": {
+      "easy": [
+        "I am from England.",
+        "I play for Arsenal.",
+        "I usually play on the right wing."
+      ],
+      "medium": [
+        "I came through Arsenal's academy.",
+        "I took a penalty in a major final shootout.",
+        "I am known for dribbling and end product."
+      ],
+      "hard": [
+        "I made my Arsenal first-team debut in 2018.",
+        "I was named Arsenal Player of the Season multiple times.",
+        "I helped England reach the Euro 2020 final."
+      ]
+    }
+  },
+  {
+    "name": "Martin Ødegaard",
+    "alternate_names": [
+      "odegaard",
+      "martin odegaard"
+    ],
+    "nationality": "Norway",
+    "position": "Midfielder",
+    "clubs": [
+      "Strømsgodset",
+      "Real Madrid",
+      "Heerenveen",
+      "Vitesse",
+      "Real Sociedad",
+      "Arsenal"
+    ],
+    "birth_year": 1998,
+    "world_cup_winner": false,
+    "ballon_dor_wins": 0,
+    "info": "Ødegaard became Arsenal captain and one of the Premier League's best playmakers.",
+    "clues": {
+      "easy": [
+        "I am from Norway.",
+        "I am a midfielder.",
+        "I captained Arsenal."
+      ],
+      "medium": [
+        "I joined Real Madrid very young.",
+        "I had loan spells in the Netherlands and Spain.",
+        "I am known for left-footed passing."
+      ],
+      "hard": [
+        "I became the youngest player to play for Norway.",
+        "I was named Arsenal captain in my twenties.",
+        "I won the Premier League Young Player of the Season award."
+      ]
+    }
+  },
+  {
+    "name": "Pedri",
+    "alternate_names": [
+      "pedri gonzalez"
+    ],
+    "nationality": "Spain",
+    "position": "Midfielder",
+    "clubs": [
+      "Las Palmas",
+      "Barcelona"
+    ],
+    "birth_year": 2002,
+    "world_cup_winner": false,
+    "ballon_dor_wins": 0,
+    "info": "Pedri became a key midfielder for Barcelona and Spain while still very young.",
+    "clues": {
+      "easy": [
+        "I am from Spain.",
+        "I play for Barcelona.",
+        "I am a creative midfielder."
+      ],
+      "medium": [
+        "I won UEFA Euro 2020 Young Player of the Tournament.",
+        "I came through Las Palmas before joining Barcelona.",
+        "I wear number 8 for Barcelona."
+      ],
+      "hard": [
+        "I played over 60 games in my first season at Barcelona.",
+        "I was compared to Andrés Iniesta early in my career.",
+        "I won Olympic silver with Spain in 2020."
+      ]
+    }
+  },
+  {
+    "name": "Florian Wirtz",
+    "alternate_names": [
+      "wirtz"
+    ],
+    "nationality": "Germany",
+    "position": "Midfielder",
+    "clubs": [
+      "Köln",
+      "Bayer Leverkusen"
+    ],
+    "birth_year": 2003,
+    "world_cup_winner": false,
+    "ballon_dor_wins": 0,
+    "info": "Wirtz was a star of Bayer Leverkusen's unbeaten Bundesliga title-winning season in 2024.",
+    "clues": {
+      "easy": [
+        "I am from Germany.",
+        "I am an attacking midfielder.",
+        "I played for Bayer Leverkusen."
+      ],
+      "medium": [
+        "I came through Köln's academy.",
+        "I helped my club win the Bundesliga unbeaten.",
+        "I am known for creativity and dribbling."
+      ],
+      "hard": [
+        "I suffered a serious knee injury early in my career.",
+        "I was named Bundesliga Player of the Season.",
+        "I made my Germany debut before turning 20."
+      ]
+    }
+  },
+  {
+    "name": "Rafael Leão",
+    "alternate_names": [
+      "leao",
+      "rafael leao"
+    ],
+    "nationality": "Portugal",
+    "position": "Forward",
+    "clubs": [
+      "Sporting CP",
+      "Lille",
+      "AC Milan"
+    ],
+    "birth_year": 1999,
+    "world_cup_winner": false,
+    "ballon_dor_wins": 0,
+    "info": "Leão is known for his speed and dribbling and became a star at AC Milan.",
+    "clues": {
+      "easy": [
+        "I am from Portugal.",
+        "I play as a winger.",
+        "I play for AC Milan."
+      ],
+      "medium": [
+        "I also played for Lille.",
+        "I am known for explosive pace.",
+        "I won Serie A with AC Milan."
+      ],
+      "hard": [
+        "I won Serie A MVP in 2022.",
+        "I scored in a Champions League semi-final.",
+        "I came through Sporting CP's academy."
+      ]
+    }
+  },
+  {
+    "name": "Carlos Valderrama",
+    "alternate_names": [
+      "valderrama",
+      "el pibe"
+    ],
+    "nationality": "Colombia",
+    "position": "Midfielder",
+    "clubs": [
+      "Unión Magdalena",
+      "Millonarios",
+      "Montpellier",
+      "Real Valladolid",
+      "Independiente Medellín"
+    ],
+    "birth_year": 1961,
+    "world_cup_winner": false,
+    "ballon_dor_wins": 0,
+    "info": "Valderrama is famous for his blonde afro and captaining Colombia in the 1990s.",
+    "clues": {
+      "easy": [
+        "I am from Colombia.",
+        "I am a midfielder.",
+        "I am famous for my distinctive hairstyle."
+      ],
+      "medium": [
+        "I captained Colombia at the World Cup.",
+        "I played in Europe for Montpellier.",
+        "I was known as El Pibe."
+      ],
+      "hard": [
+        "I won the South American Footballer of the Year award.",
+        "I played at three World Cups for Colombia.",
+        "I was known for my precise passing and creativity."
+      ]
+    }
+  },
+  {
+    "name": "George Best",
+    "alternate_names": [
+      "best"
+    ],
+    "nationality": "Northern Ireland",
+    "position": "Forward",
+    "clubs": [
+      "Manchester United",
+      "Stockport County",
+      "Cork Celtic",
+      "Los Angeles Aztecs",
+      "Fulham"
+    ],
+    "birth_year": 1946,
+    "world_cup_winner": false,
+    "ballon_dor_wins": 1,
+    "info": "Best won the Ballon d'Or in 1968 and is regarded as one of Manchester United's greatest players.",
+    "clues": {
+      "easy": [
+        "I am from Northern Ireland.",
+        "I played for Manchester United.",
+        "I was a skilful winger."
+      ],
+      "medium": [
+        "I won the Ballon d'Or in 1968.",
+        "I won the European Cup with Manchester United.",
+        "I was famous for dribbling and flair."
+      ],
+      "hard": [
+        "I won the European Cup in 1968 after United's recovery from the Munich air disaster era.",
+        "I made my Manchester United debut at 17.",
+        "I played internationally for Northern Ireland."
+      ]
+    }
+  },
+  {
+    "name": "Johan Cruyff",
+    "alternate_names": [
+      "cruyff",
+      "johan cruyff"
+    ],
+    "nationality": "Netherlands",
+    "position": "Forward",
+    "clubs": [
+      "Ajax",
+      "Barcelona",
+      "Los Angeles Aztecs",
+      "Washington Diplomats",
+      "Feyenoord"
+    ],
+    "birth_year": 1947,
+    "world_cup_winner": false,
+    "ballon_dor_wins": 3,
+    "info": "Cruyff won three Ballon d'Or awards and later revolutionized football as Barcelona manager.",
+    "clues": {
+      "easy": [
+        "I am from the Netherlands.",
+        "I played for Ajax and Barcelona.",
+        "I won the Ballon d'Or three times."
+      ],
+      "medium": [
+        "I pioneered Total Football.",
+        "I later managed Barcelona.",
+        "I wore number 14 for the Netherlands."
+      ],
+      "hard": [
+        "I led Ajax to three consecutive European Cups.",
+        "A famous turn is named after me.",
+        "I finished my playing career at Feyenoord."
+      ]
+    }
+  },
+  {
+    "name": "Marco van Basten",
+    "alternate_names": [
+      "van basten"
+    ],
+    "nationality": "Netherlands",
+    "position": "Forward",
+    "clubs": [
+      "Ajax",
+      "AC Milan"
+    ],
+    "birth_year": 1964,
+    "world_cup_winner": false,
+    "ballon_dor_wins": 3,
+    "info": "Van Basten scored one of the greatest goals in European Championship history in 1988.",
+    "clues": {
+      "easy": [
+        "I am from the Netherlands.",
+        "I am a striker.",
+        "I played for AC Milan."
+      ],
+      "medium": [
+        "I won the Ballon d'Or three times.",
+        "I also played for Ajax.",
+        "I won the European Championship in 1988."
+      ],
+      "hard": [
+        "I scored a famous volley in the Euro 1988 final.",
+        "I won multiple European Cups with AC Milan.",
+        "Injuries ended my playing career in my twenties."
+      ]
+    }
+  },
+  {
+    "name": "Franz Beckenbauer",
+    "alternate_names": [
+      "beckenbauer",
+      "der kaiser"
+    ],
+    "nationality": "Germany",
+    "position": "Defender",
+    "clubs": [
+      "Bayern Munich",
+      "New York Cosmos",
+      "Hamburger SV"
+    ],
+    "birth_year": 1945,
+    "world_cup_winner": true,
+    "ballon_dor_wins": 2,
+    "info": "Beckenbauer won the World Cup as player and manager and is known as Der Kaiser.",
+    "clues": {
+      "easy": [
+        "I am from Germany.",
+        "I am a defender.",
+        "I won the FIFA World Cup."
+      ],
+      "medium": [
+        "I played for Bayern Munich.",
+        "I won the Ballon d'Or twice.",
+        "I am known as Der Kaiser."
+      ],
+      "hard": [
+        "I won the World Cup as a player in 1974 and as a manager in 1990.",
+        "I revolutionized the sweeper role.",
+        "I won the European Championship in 1972."
+      ]
+    }
+  },
+  {
+    "name": "Michel Platini",
+    "alternate_names": [
+      "platini"
+    ],
+    "nationality": "France",
+    "position": "Midfielder",
+    "clubs": [
+      "Nancy",
+      "Saint-Étienne",
+      "Juventus"
+    ],
+    "birth_year": 1955,
+    "world_cup_winner": false,
+    "ballon_dor_wins": 3,
+    "info": "Platini won three consecutive Ballon d'Or awards and starred for France and Juventus.",
+    "clues": {
+      "easy": [
+        "I am from France.",
+        "I am a midfielder.",
+        "I played for Juventus."
+      ],
+      "medium": [
+        "I won the Ballon d'Or three times in a row.",
+        "I captained France.",
+        "I won the European Championship in 1984."
+      ],
+      "hard": [
+        "I scored nine goals at Euro 1984.",
+        "I won the European Cup with Juventus.",
+        "I later became UEFA president."
+      ]
+    }
+  }
+]

@@ -4,20 +4,30 @@ A fun football guessing game built with Python and Streamlit. Read clues about a
 
 ## What this project does
 
-You see clues about a football player — nationality, clubs, achievements, and more — and try to guess who it is. Fewer clues and fewer wrong guesses mean a higher score.
+You see clues about a football player — nationality, clubs, achievements, and more — and try to guess who it is. Fewer clues and fewer wrong guesses mean a higher score. Play Classic mode for a single round, or take on the **5 Player Challenge** to test yourself over five rounds.
+
+### Features
+
+- Three difficulty levels (Easy, Medium, Hard)
+- Clues revealed one at a time
+- Forgiving answer matching (ignores capitals, accents, extra spaces)
+- Scoring that rewards early guesses
+- Penalties for wrong guesses
+- Streak bonus (+20 for 3 correct in a row)
+- Session statistics tracked in your browser
+- Mobile-friendly dark football theme
 
 ## Project structure
 
 ```
-football-guess-player/
 ├── app.py              # Main Streamlit entry point
 ├── requirements.txt    # Python dependencies
 ├── README.md
 ├── data/
-│   └── players.json    # Player database (added in Stage 2)
+│   └── players.json    # Player database (55 players)
 └── utils/
     ├── __init__.py
-    ├── game.py         # Game logic (added in later stages)
+    ├── game.py         # Game logic, scoring, answer checking
     └── styling.py      # Custom CSS styling
 ```
 
@@ -37,11 +47,52 @@ streamlit run app.py
 
 Your browser should open automatically. If not, go to `http://localhost:8501`.
 
-## Current status
+## How to play
 
-**Stage 1 complete** — Basic Streamlit app with home screen, dark football theme, difficulty/mode selection, and session stat placeholders.
+1. Choose a difficulty (Easy, Medium, or Hard).
+2. Pick Classic or 5 Player Challenge.
+3. Tap **START GAME**.
+4. Read the clues and type your guess.
+5. Use **NEXT CLUE** if you need help (each clue lowers your max score).
+6. Wrong guesses cost points — try again or reveal another clue.
+7. Get 3 correct in a row for a +20 streak bonus!
 
-Upcoming stages will add player data, game mechanics, scoring, and the 5 Player Challenge.
+### Scoring
+
+| Clues used | Max points |
+|------------|------------|
+| 1          | 100        |
+| 2          | 80         |
+| 3          | 60         |
+| 4          | 40         |
+| 5          | 20         |
+
+**Wrong guess penalties:** -10, -15, -20 (minimum score is 0).
+
+## How to add players
+
+Edit `data/players.json`. Each player needs:
+
+```json
+{
+  "name": "Player Name",
+  "nationality": "Country",
+  "position": "Forward",
+  "clubs": ["Club A", "Club B"],
+  "birth_year": 1990,
+  "world_cup_winner": false,
+  "ballon_dor_wins": 0,
+  "alternate_names": ["nickname"],
+  "info": "A short interesting fact.",
+  "clues": {
+    "easy": ["Clue 1", "Clue 2", "Clue 3"],
+    "medium": ["Clue 1", "Clue 2", "Clue 3"],
+    "hard": ["Clue 1", "Clue 2", "Clue 3"]
+  }
+}
+```
+
+The app validates player data on startup and skips any entries with missing fields.
 
 ## Deploy to Streamlit Community Cloud
 
@@ -53,6 +104,9 @@ Upcoming stages will add player data, game mechanics, scoring, and the 5 Player 
 
 No secrets or database are required for Version 1.
 
-## Adding players (coming in Stage 2)
+## Tech stack
 
-Player data will live in `data/players.json`. Each player needs a name, nationality, position, clubs, and clues for easy, medium, and hard difficulties.
+- Python 3
+- Streamlit
+- JSON file for player data (no database)
+- `st.session_state` for session statistics
