@@ -16,6 +16,7 @@ from utils.game import (
 from utils.styling import apply_custom_styles
 
 CHALLENGE_ROUNDS = 5
+BRAND_AUTHOR = "Veer Sahni"
 
 
 def init_session_state() -> None:
@@ -211,9 +212,21 @@ def render_score_display() -> None:
     )
 
 
+def render_brand_footer() -> None:
+    """Show a subtle branded footer on every screen."""
+    st.markdown(
+        f'<p class="brand-footer">Made by <span class="brand-name">{BRAND_AUTHOR}</span></p>',
+        unsafe_allow_html=True,
+    )
+
+
 def render_home_screen() -> None:
     """Display the main home screen with title, stats, and start controls."""
     st.markdown('<p class="game-title">⚽ Guess the Player</p>', unsafe_allow_html=True)
+    st.markdown(
+        f'<p class="brand-mark">by {BRAND_AUTHOR}</p>',
+        unsafe_allow_html=True,
+    )
     st.markdown(
         '<p class="game-subtitle">How quickly can you figure out who it is?</p>',
         unsafe_allow_html=True,
@@ -285,6 +298,8 @@ def render_home_screen() -> None:
         if ensure_players_loaded():
             start_game()
             st.rerun()
+
+    render_brand_footer()
 
 
 def render_game_screen() -> None:
@@ -359,6 +374,8 @@ def render_game_screen() -> None:
         go_home()
         st.rerun()
 
+    render_brand_footer()
+
 
 def render_round_result() -> None:
     """Show results after a round ends."""
@@ -428,6 +445,8 @@ def render_round_result() -> None:
         go_home()
         st.rerun()
 
+    render_brand_footer()
+
 
 def render_challenge_summary() -> None:
     """Show end-of-challenge statistics."""
@@ -468,11 +487,17 @@ def render_challenge_summary() -> None:
         go_home()
         st.rerun()
 
+    render_brand_footer()
+
 
 def render_sidebar() -> None:
     """Render sidebar with settings, stats, and how to play."""
     with st.sidebar:
         st.markdown("### ⚽ Guess the Player")
+        st.markdown(
+            f'<p class="sidebar-brand">by {BRAND_AUTHOR}</p>',
+            unsafe_allow_html=True,
+        )
         st.markdown("---")
 
         st.markdown("**Difficulty**")
@@ -518,7 +543,7 @@ def render_sidebar() -> None:
 def main() -> None:
     """Run the Streamlit app."""
     st.set_page_config(
-        page_title="Guess the Player",
+        page_title=f"Guess the Player | {BRAND_AUTHOR}",
         page_icon="⚽",
         layout="centered",
         initial_sidebar_state="auto",

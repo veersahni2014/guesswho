@@ -96,6 +96,42 @@ def apply_custom_styles() -> None:
                 margin-bottom: 2rem;
             }
 
+            /* Branding */
+            .brand-mark {
+                text-align: center;
+                font-size: 1rem;
+                font-weight: 600;
+                color: #6ee7a0 !important;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+                margin: -0.5rem 0 0.75rem 0;
+            }
+
+            .sidebar-brand {
+                text-align: center;
+                font-size: 0.85rem;
+                font-weight: 600;
+                color: #6ee7a0 !important;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                margin: -0.25rem 0 0.5rem 0;
+            }
+
+            .brand-footer {
+                text-align: center;
+                font-size: 0.8rem;
+                color: #8fb88f !important;
+                margin-top: 2.5rem;
+                padding-top: 1rem;
+                border-top: 1px solid rgba(61, 139, 61, 0.35);
+            }
+
+            .brand-name {
+                color: #6ee7a0 !important;
+                font-weight: 700;
+                letter-spacing: 0.04em;
+            }
+
             /* Stat cards on home screen */
             .stat-card {
                 background: rgba(34, 85, 34, 0.55);

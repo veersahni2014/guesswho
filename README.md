@@ -1,5 +1,7 @@
 # ⚽ Football Guess the Player
 
+**by Veer Sahni**
+
 A fun football guessing game built with Python and Streamlit. Read clues about a footballer and try to identify them before you run out of points!
 
 ## What this project does
