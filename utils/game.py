@@ -32,13 +32,23 @@ DIFFICULTY_LABELS = {
     "impossible": "💀 Impossible",
 }
 
-GAME_MODES = ["classic", "challenge", "timer"]
+GAME_MODES = ["classic", "challenge", "challenge_10", "timer", "multiple_choice"]
 
 GAME_MODE_LABELS = {
     "classic": "Classic — Guess one player",
     "challenge": "5 Player Challenge — Guess five players",
+    "challenge_10": "10 Player Challenge — Guess ten players",
     "timer": "⏱️ Timer — 30 seconds per player",
+    "multiple_choice": "🔘 Multiple Choice — Pick from four names",
 }
+
+# Rounds for multi-player challenge modes
+CHALLENGE_ROUNDS = {
+    "challenge": 5,
+    "challenge_10": 10,
+}
+
+MULTIPLE_CHOICE_OPTIONS = 4
 
 REQUIRED_PLAYER_FIELDS = {
     "name",
@@ -283,6 +293,33 @@ def select_random_player(
         pool = with_clues
 
     return random.choice(pool)
+
+
+def is_challenge_mode(game_mode: str) -> bool:
+    """Return True if the mode is a multi-round challenge."""
+    return game_mode in CHALLENGE_ROUNDS
+
+
+def get_challenge_rounds(game_mode: str) -> int:
+    """Return total rounds for a challenge mode."""
+    return CHALLENGE_ROUNDS.get(game_mode, 0)
+
+
+def generate_multiple_choice_options(
+    correct_player: dict[str, Any],
+    all_players: list[dict[str, Any]],
+    *,
+    option_count: int = MULTIPLE_CHOICE_OPTIONS,
+) -> list[str]:
+    """Build a shuffled list of player names with one correct answer."""
+    correct_name = correct_player["name"]
+    pool = [player for player in all_players if player["name"] != correct_name]
+
+    distractor_count = min(option_count - 1, len(pool))
+    distractors = random.sample(pool, distractor_count)
+    names = [correct_name] + [player["name"] for player in distractors]
+    random.shuffle(names)
+    return names
 
 
 def format_player_info(player: dict[str, Any]) -> str:

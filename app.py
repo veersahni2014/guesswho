@@ -17,16 +17,18 @@ from utils.game import (
     check_guess,
     clue_score,
     format_player_info,
+    generate_multiple_choice_options,
     get_base_player_info,
+    get_challenge_rounds,
     get_clues_for_difficulty,
     get_timer_remaining,
+    is_challenge_mode,
     load_players,
     select_random_player,
 )
 from utils.effects import show_football_celebration, show_potty_overlay
 from utils.styling import apply_custom_styles
 
-CHALLENGE_ROUNDS = 5
 BRAND_AUTHOR = "Veer Sahni"
 
 
@@ -62,6 +64,7 @@ def init_session_state() -> None:
         "wrong_feedback_active": False,
         "round_start_time": 0.0,
         "timed_out": False,
+        "choice_options": [],
     }
     for key, value in defaults.items():
         if key not in st.session_state:
@@ -88,6 +91,7 @@ def go_home() -> None:
     st.session_state.challenge_players = []
     st.session_state.challenge_wrong_guesses = 0
     st.session_state.timed_out = False
+    st.session_state.choice_options = []
 
 
 def start_new_round() -> None:
@@ -116,6 +120,13 @@ def start_new_round() -> None:
     st.session_state.guess_input_key += 1
     st.session_state.round_start_time = time.time()
     st.session_state.timed_out = False
+    if st.session_state.game_mode == "multiple_choice":
+        st.session_state.choice_options = generate_multiple_choice_options(
+            player,
+            st.session_state.players,
+        )
+    else:
+        st.session_state.choice_options = []
     st.session_state.screen = "playing"
 
 
@@ -129,7 +140,7 @@ def start_game() -> None:
     st.session_state.challenge_players = []
     st.session_state.challenge_wrong_guesses = 0
 
-    if st.session_state.game_mode == "challenge":
+    if is_challenge_mode(st.session_state.game_mode):
         st.session_state.challenge_round = 1
 
     start_new_round()
@@ -171,7 +182,7 @@ def finish_round(*, won: bool, gave_up: bool = False, timed_out: bool = False) -
     st.session_state.total_points += score
     st.session_state.best_score = max(st.session_state.best_score, score)
 
-    if st.session_state.game_mode == "challenge":
+    if is_challenge_mode(st.session_state.game_mode):
         st.session_state.challenge_scores.append(score)
         if won:
             st.session_state.challenge_players.append(player["name"])
@@ -285,6 +296,55 @@ def render_score_display() -> None:
     )
 
 
+def render_text_guess() -> None:
+    """Text input guessing for classic, timer, and challenge modes."""
+    guess = st.text_input(
+        "Who is this player?",
+        key=f"guess_input_{st.session_state.guess_input_key}",
+        placeholder="Type the player's name...",
+    )
+
+    col1, col2 = st.columns(2)
+    with col1:
+        if st.button("GUESS", type="primary", use_container_width=True):
+            handle_guess(guess)
+            st.rerun()
+
+    with col2:
+        if st.session_state.clues_revealed < len(st.session_state.clues):
+            if st.button("NEXT CLUE", use_container_width=True):
+                reveal_next_clue()
+                st.rerun()
+        else:
+            st.button("NEXT CLUE", use_container_width=True, disabled=True)
+
+
+def render_multiple_choice_guess() -> None:
+    """Button-based guessing — no typing required."""
+    st.markdown("**Who is this player?**")
+    options = st.session_state.choice_options
+
+    if not options:
+        st.warning("No choices available. Go back and start a new game.")
+        return
+
+    col1, col2 = st.columns(2)
+    for index, name in enumerate(options):
+        column = col1 if index % 2 == 0 else col2
+        with column:
+            if st.button(name, key=f"mc_choice_{st.session_state.guess_input_key}_{index}", use_container_width=True):
+                handle_guess(name)
+                st.rerun()
+
+    st.markdown("")
+    if st.session_state.clues_revealed < len(st.session_state.clues):
+        if st.button("NEXT CLUE", use_container_width=True):
+            reveal_next_clue()
+            st.rerun()
+    else:
+        st.button("NEXT CLUE", use_container_width=True, disabled=True)
+
+
 def render_brand_footer() -> None:
     """Show a subtle branded footer on every screen."""
     st.markdown(
@@ -395,9 +455,10 @@ def render_game_screen() -> None:
         return
 
     # Header with mode info
-    if st.session_state.game_mode == "challenge":
+    if is_challenge_mode(st.session_state.game_mode):
+        total_rounds = get_challenge_rounds(st.session_state.game_mode)
         st.markdown(
-            f'<p class="round-badge">Round {st.session_state.challenge_round} of {CHALLENGE_ROUNDS}</p>',
+            f'<p class="round-badge">Round {st.session_state.challenge_round} of {total_rounds}</p>',
             unsafe_allow_html=True,
         )
 
@@ -432,26 +493,10 @@ def render_game_screen() -> None:
 
     st.markdown("---")
 
-    # Guessing interface
-    guess = st.text_input(
-        "Who is this player?",
-        key=f"guess_input_{st.session_state.guess_input_key}",
-        placeholder="Type the player's name...",
-    )
-
-    col1, col2 = st.columns(2)
-    with col1:
-        if st.button("GUESS", type="primary", use_container_width=True):
-            handle_guess(guess)
-            st.rerun()
-
-    with col2:
-        if st.session_state.clues_revealed < len(st.session_state.clues):
-            if st.button("NEXT CLUE", use_container_width=True):
-                reveal_next_clue()
-                st.rerun()
-        else:
-            st.button("NEXT CLUE", use_container_width=True, disabled=True)
+    if st.session_state.game_mode == "multiple_choice":
+        render_multiple_choice_guess()
+    else:
+        render_text_guess()
 
     st.markdown("")
 
@@ -523,21 +568,22 @@ def render_round_result() -> None:
 
     st.markdown("")
 
+    total_rounds = get_challenge_rounds(st.session_state.game_mode)
     challenge_done = (
-        st.session_state.game_mode == "challenge"
-        and len(st.session_state.challenge_scores) >= CHALLENGE_ROUNDS
+        is_challenge_mode(st.session_state.game_mode)
+        and len(st.session_state.challenge_scores) >= total_rounds
     )
 
     if challenge_done:
         if st.button("VIEW RESULTS", type="primary", use_container_width=True):
             st.session_state.screen = "challenge_summary"
             st.rerun()
-    elif st.session_state.game_mode == "challenge":
+    elif is_challenge_mode(st.session_state.game_mode):
         if st.button("NEXT PLAYER", type="primary", use_container_width=True):
             st.session_state.challenge_round += 1
             start_new_round()
             st.rerun()
-    elif st.session_state.game_mode == "classic" or st.session_state.game_mode == "timer":
+    elif st.session_state.game_mode in ("classic", "timer", "multiple_choice"):
         if st.button("NEXT PLAYER", type="primary", use_container_width=True):
             start_new_round()
             st.rerun()
@@ -555,16 +601,18 @@ def render_challenge_summary() -> None:
     total = sum(scores)
     average = round(total / len(scores), 1) if scores else 0
     best_round = max(scores) if scores else 0
+    total_rounds = get_challenge_rounds(st.session_state.game_mode) or len(scores)
     players_guessed = len(st.session_state.challenge_players)
 
-    st.markdown('<p class="game-title">🏆 Challenge Complete!</p>', unsafe_allow_html=True)
+    title = "10 Player Challenge Complete!" if total_rounds == 10 else "Challenge Complete!"
+    st.markdown(f'<p class="game-title">🏆 {title}</p>', unsafe_allow_html=True)
 
     st.markdown(
         f"""
         <div class="result-card">
             <p>⭐ <strong>Total score:</strong> {total}</p>
             <p>📊 <strong>Average score:</strong> {average}</p>
-            <p>✅ <strong>Players guessed:</strong> {players_guessed} / {CHALLENGE_ROUNDS}</p>
+            <p>✅ <strong>Players guessed:</strong> {players_guessed} / {total_rounds}</p>
             <p>❌ <strong>Wrong guesses:</strong> {st.session_state.challenge_wrong_guesses}</p>
             <p>🏅 <strong>Best round:</strong> {best_round}</p>
         </div>
@@ -634,10 +682,11 @@ def render_sidebar() -> None:
             2. Tap **START GAME**.
             3. Country, club, and position are always shown.
             4. Reveal extra clues one at a time.
-            5. Type your guess — fewer clues means more points!
+            5. Type your guess — or use **Multiple Choice** mode (no typing!).
             6. **Timer mode:** guess within 30 seconds.
-            7. **Impossible:** the toughest clues.
-            8. Get 3 correct in a row for a +20 bonus!
+            7. **10 Player Challenge:** guess ten players in one run.
+            8. **Impossible:** the toughest clues.
+            9. Get 3 correct in a row for a +20 bonus!
             """
         )
 
