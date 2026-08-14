@@ -362,6 +362,14 @@ def apply_custom_styles() -> None:
                 color: #f87171 !important;
             }
 
+            /* Multiple choice buttons */
+            div.stButton > button[kind="secondary"],
+            div[data-testid="column"] div.stButton > button {
+                min-height: 3.25rem;
+                font-size: 1.05rem !important;
+                font-weight: 600 !important;
+            }
+
             /* Text input */
             div[data-testid="stTextInput"] input {
                 font-size: 1.15rem !important;
