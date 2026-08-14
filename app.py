@@ -1,11 +1,19 @@
 """Football Guess the Player — Streamlit app entry point."""
 
+import sys
+from pathlib import Path
+
+# Ensure the app root is importable on Streamlit Cloud
+_APP_ROOT = Path(__file__).resolve().parent
+if str(_APP_ROOT) not in sys.path:
+    sys.path.insert(0, str(_APP_ROOT))
+
 import time
 from datetime import timedelta
 
 import streamlit as st
 
-from utils.game import (
+from game_utils.game import (
     DIFFICULTY_LABELS,
     DIFFICULTY_LEVELS,
     GAME_MODE_LABELS,
@@ -26,8 +34,8 @@ from utils.game import (
     load_players,
     select_random_player,
 )
-from utils.effects import show_football_celebration, show_potty_overlay
-from utils.styling import apply_custom_styles
+from game_utils.effects import show_football_celebration, show_potty_overlay
+from game_utils.styling import apply_custom_styles
 
 BRAND_AUTHOR = "Veer Sahni"
 
