@@ -7,6 +7,7 @@ import random
 import re
 import time
 import unicodedata
+from difflib import SequenceMatcher
 from pathlib import Path
 from typing import Any
 
@@ -77,6 +78,77 @@ def normalize_text(text: str) -> str:
     )
     collapsed = re.sub(r"\s+", " ", without_accents.strip().lower())
     return collapsed
+
+
+def compact_text(text: str) -> str:
+    """Remove spaces and punctuation so 'de bruyne' matches 'debruyne'."""
+    return re.sub(r"[\s\-.''`]", "", text)
+
+
+def spelling_similarity(left: str, right: str) -> float:
+    """Return how similar two strings are (0.0 to 1.0)."""
+    return SequenceMatcher(None, left, right).ratio()
+
+
+def levenshtein_distance(left: str, right: str) -> int:
+    """Count the minimum single-character edits between two strings."""
+    if len(left) < len(right):
+        return levenshtein_distance(right, left)
+    if not right:
+        return len(left)
+
+    previous_row = list(range(len(right) + 1))
+    for i, left_char in enumerate(left):
+        current_row = [i + 1]
+        for j, right_char in enumerate(right):
+            insertions = previous_row[j + 1] + 1
+            deletions = current_row[j] + 1
+            substitutions = previous_row[j] + (left_char != right_char)
+            current_row.append(min(insertions, deletions, substitutions))
+        previous_row = current_row
+
+    return previous_row[-1]
+
+
+def max_allowed_edits(text: str) -> int:
+    """How many typos are allowed based on answer length."""
+    length = len(text)
+    if length <= 5:
+        return 1
+    if length <= 10:
+        return 2
+    return 3
+
+
+def min_similarity_ratio(text: str) -> float:
+    """Minimum similarity score required based on answer length."""
+    length = len(text)
+    if length <= 5:
+        return 0.86
+    if length <= 10:
+        return 0.82
+    return 0.78
+
+
+def is_fuzzy_spelling_match(guess: str, answer: str) -> bool:
+    """Return True if the guess is a close spelling of the acceptable answer."""
+    if guess == answer:
+        return True
+
+    if len(guess) < 3:
+        return False
+
+    if compact_text(guess) == compact_text(answer):
+        return True
+
+    reference = answer if len(answer) >= len(guess) else guess
+    if abs(len(guess) - len(answer)) > max_allowed_edits(reference):
+        return False
+
+    if spelling_similarity(guess, answer) < min_similarity_ratio(reference):
+        return False
+
+    return levenshtein_distance(guess, answer) <= max_allowed_edits(reference)
 
 
 def load_players(path: Path | None = None) -> tuple[list[dict[str, Any]], list[str]]:
@@ -174,7 +246,7 @@ def get_acceptable_answers(player: dict[str, Any]) -> set[str]:
 
 
 def check_guess(guess: str, player: dict[str, Any]) -> bool:
-    """Return True if the guess matches the player (forgiving but strict)."""
+    """Return True if the guess matches the player (exact, nickname, or close spelling)."""
     normalized_guess = normalize_text(guess)
     if not normalized_guess:
         return False
@@ -184,9 +256,8 @@ def check_guess(guess: str, player: dict[str, Any]) -> bool:
     if normalized_guess in acceptable:
         return True
 
-    # Allow guesses that match a multi-word alternate exactly
     for answer in acceptable:
-        if " " in answer and normalized_guess == answer:
+        if is_fuzzy_spelling_match(normalized_guess, answer):
             return True
 
     return False
