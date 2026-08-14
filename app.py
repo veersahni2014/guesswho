@@ -13,6 +13,7 @@ from utils.game import (
     load_players,
     select_random_player,
 )
+from utils.effects import show_football_celebration, show_potty_overlay
 from utils.styling import apply_custom_styles
 
 CHALLENGE_ROUNDS = 5
@@ -48,6 +49,7 @@ def init_session_state() -> None:
         "challenge_players": [],
         "challenge_wrong_guesses": 0,
         "guess_input_key": 0,
+        "wrong_feedback_active": False,
     }
     for key, value in defaults.items():
         if key not in st.session_state:
@@ -178,7 +180,7 @@ def handle_guess(guess: str) -> None:
 
     st.session_state.wrong_guesses_round += 1
     st.session_state.wrong_guesses_total += 1
-    st.error("❌ Not quite! Try again or reveal another clue.")
+    st.session_state.wrong_feedback_active = True
     st.session_state.guess_input_key += 1
 
 
@@ -304,6 +306,10 @@ def render_home_screen() -> None:
 
 def render_game_screen() -> None:
     """Display the active game with clues and guessing."""
+    if st.session_state.wrong_feedback_active:
+        show_potty_overlay()
+        st.session_state.wrong_feedback_active = False
+
     player = st.session_state.current_player
     if player is None:
         go_home()
@@ -386,8 +392,8 @@ def render_round_result() -> None:
         return
 
     if st.session_state.round_won:
+        show_football_celebration()
         st.success("🎉 Correct!")
-        st.balloons()
         st.markdown(f"## {player['name']}")
 
         bonus_text = ""

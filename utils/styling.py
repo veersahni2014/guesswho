@@ -313,6 +313,71 @@ def apply_custom_styles() -> None:
                 color: inherit !important;
             }
 
+            /* Falling football celebration */
+            .football-celebration {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                pointer-events: none;
+                z-index: 999998;
+                overflow: hidden;
+            }
+
+            .falling-football {
+                position: absolute;
+                top: -12%;
+                font-size: 2.75rem;
+                line-height: 1;
+                animation: football-fall 3.2s linear forwards;
+            }
+
+            @keyframes football-fall {
+                0% {
+                    transform: translateY(0) rotate(0deg);
+                    opacity: 1;
+                }
+                100% {
+                    transform: translateY(115vh) rotate(720deg);
+                    opacity: 0;
+                }
+            }
+
+            /* Wrong-answer potty overlay */
+            .potty-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: rgba(0, 0, 0, 0.6);
+                z-index: 999999;
+                pointer-events: none;
+                animation: potty-fade 1s ease forwards;
+            }
+
+            .potty-icon {
+                font-size: clamp(6rem, 28vw, 10rem);
+                line-height: 1;
+                animation: potty-pop 0.35s ease-out;
+                filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.45));
+            }
+
+            @keyframes potty-pop {
+                0% { transform: scale(0.2); opacity: 0; }
+                70% { transform: scale(1.12); opacity: 1; }
+                100% { transform: scale(1); opacity: 1; }
+            }
+
+            @keyframes potty-fade {
+                0%, 75% { opacity: 1; }
+                100% { opacity: 0; visibility: hidden; }
+            }
+
             @media (max-width: 768px) {
                 .game-title {
                     font-size: 2rem;
