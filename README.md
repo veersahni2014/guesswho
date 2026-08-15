@@ -27,7 +27,7 @@ You see clues about a football player — nationality, clubs, achievements, and 
 ├── README.md
 ├── data/
 │   └── players.json    # Player database (55 players)
-└── game_utils/
+└── guesswho_game/
     ├── __init__.py
     ├── game.py         # Game logic, scoring, answer checking
     └── styling.py      # Custom CSS styling

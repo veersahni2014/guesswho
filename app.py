@@ -13,7 +13,7 @@ from datetime import timedelta
 
 import streamlit as st
 
-from game_utils.game import (
+from guesswho_game.game import (
     DIFFICULTY_LABELS,
     DIFFICULTY_LEVELS,
     GAME_MODE_LABELS,
@@ -35,8 +35,8 @@ from game_utils.game import (
     load_players,
     select_random_player,
 )
-from game_utils.effects import show_football_celebration, show_potty_overlay
-from game_utils.styling import apply_custom_styles
+from guesswho_game.effects import show_football_celebration, show_potty_overlay
+from guesswho_game.styling import apply_custom_styles
 
 BRAND_AUTHOR = "Veer Sahni"
 
