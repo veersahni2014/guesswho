@@ -1,114 +1,64 @@
-# ⚽ Football Guess the Player
+# Blox Fruits Combo Maker
 
-**by Veer Sahni**
+A fan-made **Blox Fruits PvP combo generator** built with Python and Streamlit. Input your build (fruit, sword, fighting style, gun, stats, race) and get working combo sequences validated with stun/startup frame logic.
 
-A fun football guessing game built with Python and Streamlit. Read clues about a footballer and try to identify them before you run out of points!
+## What it does
 
-## What this project does
-
-You see clues about a football player — nationality, clubs, achievements, and more — and try to guess who it is. Fewer clues and fewer wrong guesses mean a higher score. Play Classic mode for a single round, or take on the **5 Player Challenge** to test yourself over five rounds.
-
-### Features
-
-- Three difficulty levels (Easy, Medium, Hard)
-- Clues revealed one at a time
-- Forgiving answer matching (ignores capitals, accents, extra spaces)
-- Scoring that rewards early guesses
-- Penalties for wrong guesses
-- Streak bonus (+20 for 3 correct in a row)
-- Session statistics tracked in your browser
-- Mobile-friendly dark football theme
+- Select your full loadout: fruit, sword, fighting style, optional gun, and race
+- Choose a stat preset (Fruit Main, Sword Main, Hybrid, etc.) or customize points
+- Toggle Observation (Ken) and ping for realistic combo validation
+- Generate up to 3 combo variants: meta preset, auto-generated, and safe/reliable
+- See step-by-step breakdown with damage estimates, stun windows, and link margins
 
 ## Project structure
 
 ```
-├── app.py              # Main Streamlit entry point
-├── requirements.txt    # Python dependencies
-├── README.md
+├── app.py                    # Streamlit UI
+├── requirements.txt
 ├── data/
-│   └── players.json    # Player database (55 players)
-└── game_utils/
-    ├── __init__.py
-    ├── game.py         # Game logic, scoring, answer checking
-    └── styling.py      # Custom CSS styling
+│   └── combo_moves.json      # Move database (fruits, swords, styles, guns)
+└── combo_utils/
+    ├── engine.py             # Combo generation & validation
+    └── styling.py            # Ocean-themed UI
 ```
 
-## How to run locally
-
-### 1. Install dependencies
+## Run locally
 
 ```bash
 pip install -r requirements.txt
-```
-
-### 2. Start the app
-
-```bash
 streamlit run app.py
 ```
 
-Your browser should open automatically. If not, go to `http://localhost:8501`.
+Open `http://localhost:8501` in your browser.
 
-## How to play
+## How combos are built
 
-1. Choose a difficulty (Easy, Medium, or Hard).
-2. Pick Classic or 5 Player Challenge.
-3. Tap **START GAME**.
-4. Read the clues and type your guess.
-5. Use **NEXT CLUE** if you need help (each clue lowers your max score).
-6. Wrong guesses cost points — try again or reveal another clue.
-7. Get 3 correct in a row for a +20 streak bonus!
+Combos follow the standard PvP structure:
 
-### Scoring
+1. **Opener** — stun or Ken-break move (required vs Observation users)
+2. **Filler** — M1 chains or sword swap during cooldowns
+3. **Damage** — fruit and fighting style abilities
+4. **Finisher** — highest damage move last
 
-| Clues used | Max points |
-|------------|------------|
-| 1          | 100        |
-| 2          | 80         |
-| 3          | 60         |
-| 4          | 40         |
-| 5          | 20         |
+A move **links** to the next when: `stun_duration ≥ next_startup + ping_buffer`
 
-**Wrong guess penalties:** -10, -15, -20 (minimum score is 0).
+## Supported items
 
-## How to add players
+**Fruits:** Dough, Kitsune, Dragon, Leopard, Venom, Gas, Control, Portal, Light, Magma, Buddha
 
-Edit `data/players.json`. Each player needs:
+**Swords:** Cursed Dual Katana, True Triple Katana, Shark Anchor, Spikey Trident, Dark Blade
 
-```json
-{
-  "name": "Player Name",
-  "nationality": "Country",
-  "position": "Forward",
-  "clubs": ["Club A", "Club B"],
-  "birth_year": 1990,
-  "world_cup_winner": false,
-  "ballon_dor_wins": 0,
-  "alternate_names": ["nickname"],
-  "info": "A short interesting fact.",
-  "clues": {
-    "easy": ["Clue 1", "Clue 2", "Clue 3"],
-    "medium": ["Clue 1", "Clue 2", "Clue 3"],
-    "hard": ["Clue 1", "Clue 2", "Clue 3"]
-  }
-}
-```
+**Fighting Styles:** Godhuman, Sanguine Art, Electric Claw, Superhuman, Death Step
 
-The app validates player data on startup and skips any entries with missing fields.
+**Guns:** Soul Guitar, Kabucha
 
-## Deploy to Streamlit Community Cloud
+## Deploy to Streamlit Cloud
 
-1. Push this repository to GitHub.
-2. Go to [share.streamlit.io](https://share.streamlit.io).
-3. Click **New app** and connect your GitHub repo.
-4. Set the main file path to `app.py`.
-5. Click **Deploy**.
+1. Push to GitHub
+2. Go to [share.streamlit.io](https://share.streamlit.io)
+3. Set main file to `app.py`
+4. Deploy
 
-No secrets or database are required for Version 1.
+## Disclaimer
 
-## Tech stack
-
-- Python 3
-- Streamlit
-- JSON file for player data (no database)
-- `st.session_state` for session statistics
+This is a fan-made tool for educational purposes. Move values are approximations and may not match the live game after updates. Not affiliated with Roblox or Blox Fruits.
