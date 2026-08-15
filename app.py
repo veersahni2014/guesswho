@@ -418,7 +418,6 @@ def render_home_screen() -> None:
         options=DIFFICULTY_LEVELS,
         index=difficulty_index,
         format_func=lambda d: DIFFICULTY_LABELS[d],
-        horizontal=True,
         label_visibility="collapsed",
     )
     st.session_state.difficulty = difficulty
@@ -692,8 +691,8 @@ def render_sidebar() -> None:
             4. Reveal extra clues one at a time.
             5. Type your guess — or use **Multiple Choice** mode (no typing!).
             6. **Timer mode:** guess within 30 seconds.
-            7. **10 Player Challenge:** guess ten players in one run.
-            8. **Impossible:** the toughest clues.
+            7. **Baby:** super easy clues. **??:** cryptic mystery clues.
+            8. **Impossible:** the toughest standard clues.
             9. Get 3 correct in a row for a +20 bonus!
             """
         )

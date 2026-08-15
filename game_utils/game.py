@@ -24,13 +24,15 @@ STREAK_BONUS_THRESHOLD = 3
 # Seconds allowed per round in timer mode
 TIMER_SECONDS = 30
 
-DIFFICULTY_LEVELS = ["easy", "medium", "hard", "impossible"]
+DIFFICULTY_LEVELS = ["baby", "easy", "medium", "hard", "impossible", "??"]
 
 DIFFICULTY_LABELS = {
+    "baby": "👶 Baby",
     "easy": "🟢 Easy",
     "medium": "🟡 Medium",
     "hard": "🔴 Hard",
     "impossible": "💀 Impossible",
+    "??": "❓ ??",
 }
 
 GAME_MODES = ["classic", "challenge", "challenge_10", "timer", "multiple_choice"]
@@ -266,9 +268,17 @@ def check_guess(guess: str, player: dict[str, Any]) -> bool:
 def get_clues_for_difficulty(player: dict[str, Any], difficulty: str) -> list[str]:
     """Return the clue list for the chosen difficulty."""
     clues = player.get("clues", {})
-    if difficulty == "impossible":
-        return list(clues.get("impossible", clues.get("hard", clues.get("easy", []))))
-    return list(clues.get(difficulty, clues.get("easy", [])))
+    fallbacks = {
+        "baby": ["easy"],
+        "??": ["impossible", "hard", "easy"],
+        "impossible": ["hard", "easy"],
+    }
+    if difficulty in clues:
+        return list(clues[difficulty])
+    for fallback in fallbacks.get(difficulty, ["easy"]):
+        if fallback in clues:
+            return list(clues[fallback])
+    return list(clues.get("easy", []))
 
 
 def get_club_display(player: dict[str, Any]) -> str:
