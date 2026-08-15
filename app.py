@@ -31,6 +31,7 @@ from game_utils.game import (
     get_clues_for_difficulty,
     get_timer_remaining,
     is_challenge_mode,
+    is_one_clue_mode,
     load_players,
     select_random_player,
 )
@@ -118,7 +119,11 @@ def start_new_round() -> None:
     st.session_state.recent_player_names = recent[-5:]
 
     st.session_state.current_player = player
-    st.session_state.clues = get_clues_for_difficulty(player, st.session_state.difficulty)
+    all_clues = get_clues_for_difficulty(player, st.session_state.difficulty)
+    if is_one_clue_mode(st.session_state.game_mode):
+        st.session_state.clues = [all_clues[0]] if all_clues else []
+    else:
+        st.session_state.clues = all_clues
     st.session_state.clues_revealed = 1
     st.session_state.wrong_guesses_round = 0
     st.session_state.round_won = False
@@ -319,7 +324,9 @@ def render_text_guess() -> None:
             st.rerun()
 
     with col2:
-        if st.session_state.clues_revealed < len(st.session_state.clues):
+        if is_one_clue_mode(st.session_state.game_mode):
+            st.button("NEXT CLUE", use_container_width=True, disabled=True)
+        elif st.session_state.clues_revealed < len(st.session_state.clues):
             if st.button("NEXT CLUE", use_container_width=True):
                 reveal_next_clue()
                 st.rerun()
@@ -345,12 +352,13 @@ def render_multiple_choice_guess() -> None:
                 st.rerun()
 
     st.markdown("")
-    if st.session_state.clues_revealed < len(st.session_state.clues):
-        if st.button("NEXT CLUE", use_container_width=True):
-            reveal_next_clue()
-            st.rerun()
-    else:
-        st.button("NEXT CLUE", use_container_width=True, disabled=True)
+    if not is_one_clue_mode(st.session_state.game_mode):
+        if st.session_state.clues_revealed < len(st.session_state.clues):
+            if st.button("NEXT CLUE", use_container_width=True):
+                reveal_next_clue()
+                st.rerun()
+        else:
+            st.button("NEXT CLUE", use_container_width=True, disabled=True)
 
 
 def render_brand_footer() -> None:
@@ -472,6 +480,12 @@ def render_game_screen() -> None:
     diff_label = DIFFICULTY_LABELS.get(st.session_state.difficulty, "Easy")
     st.markdown(f'<p class="difficulty-badge">{diff_label}</p>', unsafe_allow_html=True)
 
+    if is_one_clue_mode(st.session_state.game_mode):
+        st.markdown(
+            '<p class="round-badge">💡 One Clue — you only get one hint!</p>',
+            unsafe_allow_html=True,
+        )
+
     timer_tick()
     render_base_player_info(player)
 
@@ -493,8 +507,7 @@ def render_game_screen() -> None:
         )
 
     st.markdown(
-        f'<p class="clue-hint">Clue {st.session_state.clues_revealed} of {len(st.session_state.clues)} · '
-        f"Max {clue_score(st.session_state.clues_revealed)} pts</p>",
+        f'<p class="clue-hint">{"One clue only · 100 pts max" if is_one_clue_mode(st.session_state.game_mode) else f"Clue {st.session_state.clues_revealed} of {len(st.session_state.clues)} · Max {clue_score(st.session_state.clues_revealed)} pts"}</p>',
         unsafe_allow_html=True,
     )
 
@@ -590,7 +603,7 @@ def render_round_result() -> None:
             st.session_state.challenge_round += 1
             start_new_round()
             st.rerun()
-    elif st.session_state.game_mode in ("classic", "timer", "multiple_choice"):
+    elif st.session_state.game_mode in ("classic", "one_clue", "timer", "multiple_choice"):
         if st.button("NEXT PLAYER", type="primary", use_container_width=True):
             start_new_round()
             st.rerun()
@@ -690,10 +703,11 @@ def render_sidebar() -> None:
             3. Country, club, and position are always shown.
             4. Reveal extra clues one at a time.
             5. Type your guess — or use **Multiple Choice** mode (no typing!).
-            6. **Timer mode:** guess within 30 seconds.
-            7. **Baby:** super easy clues. **??:** cryptic mystery clues.
-            8. **Impossible:** the toughest standard clues.
-            9. Get 3 correct in a row for a +20 bonus!
+            6. **One Clue:** only one hint — then you must guess!
+            7. **Timer mode:** guess within 30 seconds.
+            8. **Baby:** super easy clues. **??:** cryptic mystery clues.
+            9. **Impossible:** the toughest standard clues.
+            10. Get 3 correct in a row for a +20 bonus!
             """
         )
 

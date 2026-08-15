@@ -35,10 +35,11 @@ DIFFICULTY_LABELS = {
     "??": "❓ ??",
 }
 
-GAME_MODES = ["classic", "challenge", "challenge_10", "timer", "multiple_choice"]
+GAME_MODES = ["classic", "one_clue", "challenge", "challenge_10", "timer", "multiple_choice"]
 
 GAME_MODE_LABELS = {
     "classic": "Classic — Guess one player",
+    "one_clue": "💡 One Clue — Only one hint, then guess",
     "challenge": "5 Player Challenge — Guess five players",
     "challenge_10": "10 Player Challenge — Guess ten players",
     "timer": "⏱️ Timer — 30 seconds per player",
@@ -52,6 +53,12 @@ CHALLENGE_ROUNDS = {
 }
 
 MULTIPLE_CHOICE_OPTIONS = 4
+
+
+def is_one_clue_mode(game_mode: str) -> bool:
+    """Return True if the player only gets a single clue."""
+    return game_mode == "one_clue"
+
 
 REQUIRED_PLAYER_FIELDS = {
     "name",
