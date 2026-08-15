@@ -1,0 +1,262 @@
+{
+  "meta": {
+    "version": "update-28",
+    "level_cap": 3000,
+    "stat_cap_soft": 2550,
+    "m1_stun_per_hit": 0.35,
+    "m1_startup": 0.25,
+    "m1_damage_base": 420,
+    "ping_buffer_ms": 80
+  },
+  "fruits": {
+    "Dough": {
+      "type": "Paramecia",
+      "tier": "S",
+      "moves": {
+        "V": {"name": "Piercing Clothesline", "damage": 9200, "stun": 1.8, "startup": 0.55, "ken_break": true, "role": "opener", "notes": "Pull + long stun. Best opener."},
+        "C": {"name": "Restless Dough Barrage", "damage": 7800, "stun": 2.2, "startup": 0.45, "ken_break": false, "role": "stun", "notes": "Long stun filler after opener."},
+        "Z": {"name": "Missile Jab", "damage": 6500, "stun": 1.1, "startup": 0.4, "ken_break": false, "role": "damage", "notes": "Heavy hit mid-combo."},
+        "X": {"name": "Pastry River", "damage": 7100, "stun": 1.4, "startup": 0.5, "ken_break": false, "role": "damage", "notes": "Good follow after C."},
+        "F": {"name": "Scorpion", "damage": 4800, "stun": 0.9, "startup": 0.35, "ken_break": false, "role": "mobility", "notes": "Gap closer if needed."}
+      }
+    },
+    "Kitsune": {
+      "type": "Beast",
+      "tier": "S",
+      "moves": {
+        "C": {"name": "Accursed Enchantment", "damage": 8800, "stun": 1.7, "startup": 0.5, "ken_break": true, "role": "opener", "notes": "Strong gap close + stun."},
+        "Z": {"name": "Fox Fire Disruption", "damage": 7200, "stun": 1.3, "startup": 0.42, "ken_break": false, "role": "damage", "notes": "Reliable mid-combo hit."},
+        "X": {"name": "Transformation", "damage": 9500, "stun": 1.5, "startup": 0.6, "ken_break": false, "role": "damage", "notes": "High damage beast form hit."},
+        "V": {"name": "Wild Assault", "damage": 10200, "stun": 1.2, "startup": 0.55, "ken_break": false, "role": "finisher", "notes": "Big finisher knockback."},
+        "F": {"name": "Afterimage Shuffle", "damage": 0, "stun": 0, "startup": 0.2, "ken_break": false, "role": "mobility", "notes": "Dash reposition."}
+      }
+    },
+    "Dragon": {
+      "type": "Beast",
+      "tier": "S",
+      "moves": {
+        "C": {"name": "Dragon Rush", "damage": 8500, "stun": 1.6, "startup": 0.48, "ken_break": true, "role": "opener", "notes": "Gap closer with stun."},
+        "Z": {"name": "Dragon Talon", "damage": 6800, "stun": 1.2, "startup": 0.4, "ken_break": false, "role": "damage", "notes": "Solid follow-up."},
+        "X": {"name": "Dragon Breath", "damage": 9000, "stun": 1.4, "startup": 0.52, "ken_break": false, "role": "damage", "notes": "Beam during stun window."},
+        "V": {"name": "Dragon Explosion", "damage": 11000, "stun": 1.0, "startup": 0.58, "ken_break": false, "role": "finisher", "notes": "End combo with knockback."}
+      }
+    },
+    "Leopard": {
+      "type": "Beast",
+      "tier": "S",
+      "moves": {
+        "C": {"name": "Spiral Kick", "damage": 8200, "stun": 1.5, "startup": 0.45, "ken_break": true, "role": "opener", "notes": "Instinct break gap closer."},
+        "Z": {"name": "Feral Lunge", "damage": 8500, "stun": 1.2, "startup": 0.38, "ken_break": false, "role": "damage", "notes": "Fast follow after M1s."},
+        "X": {"name": "Savage Rush", "damage": 9200, "stun": 1.3, "startup": 0.5, "ken_break": false, "role": "damage", "notes": "Multi-hit rush."},
+        "V": {"name": "Ultimate Leap", "damage": 10500, "stun": 0.9, "startup": 0.55, "ken_break": false, "role": "finisher", "notes": "Finisher — can launch away."}
+      }
+    },
+    "Venom": {
+      "type": "Paramecia",
+      "tier": "A",
+      "moves": {
+        "X": {"name": "Toxic Fog", "damage": 7500, "stun": 1.6, "startup": 0.5, "ken_break": true, "role": "opener", "notes": "Ken break AoE opener."},
+        "C": {"name": "Noxious Shot", "damage": 6200, "stun": 1.1, "startup": 0.4, "ken_break": false, "role": "damage", "notes": "Ranged follow."},
+        "Z": {"name": "Toxic Drip", "damage": 5800, "stun": 1.0, "startup": 0.38, "ken_break": false, "role": "damage", "notes": "Quick hit."},
+        "V": {"name": "Nuclear Poison", "damage": 9800, "stun": 1.2, "startup": 0.55, "ken_break": false, "role": "finisher", "notes": "Big poison burst."}
+      }
+    },
+    "Gas": {
+      "type": "Logia",
+      "tier": "S",
+      "moves": {
+        "C": {"name": "Gas Cloud", "damage": 7000, "stun": 1.4, "startup": 0.45, "ken_break": false, "role": "stun", "notes": "Persistent cloud stun."},
+        "Z": {"name": "Gas Blast", "damage": 6500, "stun": 1.1, "startup": 0.4, "ken_break": false, "role": "damage", "notes": "Quick blast."},
+        "X": {"name": "Toxic Fog", "damage": 8200, "stun": 1.5, "startup": 0.48, "ken_break": true, "role": "opener", "notes": "Ken break fog."},
+        "V": {"name": "Gas Explosion", "damage": 10000, "stun": 1.0, "startup": 0.55, "ken_break": false, "role": "finisher", "notes": "AoE finisher."}
+      }
+    },
+    "Control": {
+      "type": "Paramecia",
+      "tier": "A",
+      "moves": {
+        "Z": {"name": "Levitate", "damage": 6000, "stun": 1.7, "startup": 0.5, "ken_break": true, "role": "opener", "notes": "Lift + ken break."},
+        "C": {"name": "O", "damage": 7200, "stun": 1.3, "startup": 0.42, "ken_break": false, "role": "damage", "notes": "Ring damage."},
+        "X": {"name": "Gamma Knife", "damage": 8000, "stun": 1.2, "startup": 0.45, "ken_break": false, "role": "damage", "notes": "Heavy slash."},
+        "V": {"name": "Meteor Rain", "damage": 9500, "stun": 1.0, "startup": 0.58, "ken_break": false, "role": "finisher", "notes": "Rain finisher."}
+      }
+    },
+    "Portal": {
+      "type": "Paramecia",
+      "tier": "A",
+      "moves": {
+        "C": {"name": "Portal Door", "damage": 5500, "stun": 1.5, "startup": 0.4, "ken_break": false, "role": "opener", "notes": "Teleport behind for stun."},
+        "Z": {"name": "Quick Portal", "damage": 5000, "stun": 1.0, "startup": 0.35, "ken_break": false, "role": "mobility", "notes": "Reposition."},
+        "X": {"name": "Parallel Escape", "damage": 7800, "stun": 1.3, "startup": 0.45, "ken_break": false, "role": "damage", "notes": "Multi-portal hit."},
+        "V": {"name": "Dimensional Shift", "damage": 9000, "stun": 1.1, "startup": 0.5, "ken_break": false, "role": "finisher", "notes": "Dimension slam."}
+      }
+    },
+    "Light": {
+      "type": "Logia",
+      "tier": "B",
+      "moves": {
+        "C": {"name": "Light Ray", "damage": 5800, "stun": 1.2, "startup": 0.35, "ken_break": false, "role": "opener", "notes": "Fast ranged opener."},
+        "Z": {"name": "Barrage of Light", "damage": 6200, "stun": 1.1, "startup": 0.38, "ken_break": false, "role": "damage", "notes": "Rapid hits."},
+        "X": {"name": "Reflection Kick", "damage": 7000, "stun": 1.0, "startup": 0.42, "ken_break": false, "role": "damage", "notes": "Kick follow."},
+        "V": {"name": "Divine Departure", "damage": 8800, "stun": 0.9, "startup": 0.5, "ken_break": false, "role": "finisher", "notes": "Beam finisher."}
+      }
+    },
+    "Magma": {
+      "type": "Logia",
+      "tier": "B",
+      "moves": {
+        "V": {"name": "Magma Shower", "damage": 8500, "stun": 1.5, "startup": 0.5, "ken_break": false, "role": "opener", "notes": "AoE stun opener."},
+        "C": {"name": "Magma Hound", "damage": 6500, "stun": 1.1, "startup": 0.4, "ken_break": false, "role": "damage", "notes": "Hound chase."},
+        "Z": {"name": "Magma Blast", "damage": 5800, "stun": 1.0, "startup": 0.38, "ken_break": false, "role": "damage", "notes": "Quick blast."},
+        "X": {"name": "Great Magma Hound", "damage": 7800, "stun": 1.2, "startup": 0.45, "ken_break": false, "role": "finisher", "notes": "Big hound."}
+      }
+    },
+    "Buddha": {
+      "type": "Beast",
+      "tier": "A",
+      "moves": {
+        "Z": {"name": "Transform", "damage": 0, "stun": 0, "startup": 0.3, "ken_break": false, "role": "setup", "notes": "Transform before combo."},
+        "C": {"name": "Buddha Leap", "damage": 7000, "stun": 1.3, "startup": 0.45, "ken_break": false, "role": "opener", "notes": "Leap stun in Buddha form."},
+        "X": {"name": "Heavenly Impact", "damage": 8200, "stun": 1.2, "startup": 0.48, "ken_break": false, "role": "damage", "notes": "Ground slam."},
+        "V": {"name": "Buddha's Fury", "damage": 9500, "stun": 1.0, "startup": 0.55, "ken_break": false, "role": "finisher", "notes": "Heavy finisher."}
+      }
+    }
+  },
+  "swords": {
+    "None": {
+      "tier": "-",
+      "moves": {}
+    },
+    "Cursed Dual Katana": {
+      "tier": "S",
+      "moves": {
+        "Z": {"name": "Revolving Ravager", "damage": 5500, "stun": 1.4, "startup": 0.4, "ken_break": true, "role": "stun", "notes": "Hurricane ken break."},
+        "X": {"name": "Slayer of Goliath", "damage": 7200, "stun": 1.1, "startup": 0.45, "ken_break": false, "role": "finisher", "notes": "Best air finisher."},
+        "M1x3": {"name": "Sword M1 x3", "damage": 1800, "stun": 1.05, "startup": 0.75, "ken_break": false, "role": "filler", "notes": "Swap to sword during fruit CD."}
+      }
+    },
+    "True Triple Katana": {
+      "tier": "S",
+      "moves": {
+        "Z": {"name": "Wolf Fang Rush", "damage": 4800, "stun": 1.2, "startup": 0.38, "ken_break": false, "role": "damage", "notes": "Fast rush."},
+        "X": {"name": "Dragon Hurricane", "damage": 6500, "stun": 1.0, "startup": 0.42, "ken_break": false, "role": "damage", "notes": "Hurricane slash."},
+        "M1x3": {"name": "Sword M1 x3", "damage": 1950, "stun": 1.05, "startup": 0.7, "ken_break": false, "role": "filler", "notes": "Fastest M1 chain in game."}
+      }
+    },
+    "Shark Anchor": {
+      "tier": "A",
+      "moves": {
+        "Z": {"name": "Anchor Throw", "damage": 5200, "stun": 1.3, "startup": 0.42, "ken_break": false, "role": "stun", "notes": "Catches air campers."},
+        "X": {"name": "Anchor Smash", "damage": 6800, "stun": 1.0, "startup": 0.45, "ken_break": false, "role": "finisher", "notes": "Ground slam."},
+        "M1x3": {"name": "Sword M1 x3", "damage": 1700, "stun": 1.05, "startup": 0.8, "ken_break": false, "role": "filler", "notes": "Standard sword filler."}
+      }
+    },
+    "Spikey Trident": {
+      "tier": "A",
+      "moves": {
+        "Z": {"name": "Trident Throw", "damage": 4500, "stun": 1.1, "startup": 0.38, "ken_break": false, "role": "damage", "notes": "Throw stun."},
+        "X": {"name": "Trident Slam", "damage": 6000, "stun": 1.0, "startup": 0.42, "ken_break": false, "role": "finisher", "notes": "Slam finisher."},
+        "M1x3": {"name": "Sword M1 x3", "damage": 1650, "stun": 1.05, "startup": 0.8, "ken_break": false, "role": "filler", "notes": "Sword filler."}
+      }
+    },
+    "Dark Blade": {
+      "tier": "A",
+      "moves": {
+        "Z": {"name": "One Thousand Cuts", "damage": 5000, "stun": 1.2, "startup": 0.4, "ken_break": false, "role": "damage", "notes": "Multi-cut."},
+        "X": {"name": "Dark Bomb", "damage": 7000, "stun": 1.0, "startup": 0.45, "ken_break": false, "role": "finisher", "notes": "Bomb finisher."},
+        "M1x3": {"name": "Sword M1 x3", "damage": 1750, "stun": 1.05, "startup": 0.78, "ken_break": false, "role": "filler", "notes": "Sword filler."}
+      }
+    }
+  },
+  "fighting_styles": {
+    "Godhuman": {
+      "tier": "S",
+      "moves": {
+        "Z": {"name": "Soaring Beast", "damage": 5200, "stun": 1.2, "startup": 0.38, "ken_break": false, "role": "damage", "notes": "Leap kick."},
+        "X": {"name": "Heavenly Blood", "damage": 6000, "stun": 1.0, "startup": 0.4, "ken_break": false, "role": "damage", "notes": "Blood strike."},
+        "C": {"name": "Way of the Strong", "damage": 7500, "stun": 1.4, "startup": 0.42, "ken_break": true, "role": "stun", "notes": "Ken break grab."},
+        "M1x4": {"name": "Melee M1 x4", "damage": 1680, "stun": 1.4, "startup": 1.0, "ken_break": false, "role": "filler", "notes": "Fast M1 cancel style."}
+      }
+    },
+    "Sanguine Art": {
+      "tier": "S",
+      "moves": {
+        "Z": {"name": "Blood Drain", "damage": 5500, "stun": 1.1, "startup": 0.4, "ken_break": false, "role": "damage", "notes": "Lifesteal hit."},
+        "X": {"name": "Crimson Slash", "damage": 6200, "stun": 1.0, "startup": 0.42, "ken_break": false, "role": "damage", "notes": "Slash follow."},
+        "C": {"name": "Blood Vortex", "damage": 7000, "stun": 1.3, "startup": 0.45, "ken_break": false, "role": "finisher", "notes": "Vortex finisher + heal."},
+        "M1x4": {"name": "Melee M1 x4", "damage": 1720, "stun": 1.4, "startup": 0.95, "ken_break": false, "role": "filler", "notes": "Fast M1s with lifesteal."}
+      }
+    },
+    "Electric Claw": {
+      "tier": "A",
+      "moves": {
+        "Z": {"name": "Electric Rampage", "damage": 4800, "stun": 1.0, "startup": 0.35, "ken_break": false, "role": "damage", "notes": "Fast dash hit."},
+        "X": {"name": "Lightning Thrust", "damage": 5500, "stun": 0.9, "startup": 0.38, "ken_break": false, "role": "damage", "notes": "Thrust."},
+        "C": {"name": "Thunderclap", "damage": 6500, "stun": 1.2, "startup": 0.42, "ken_break": false, "role": "finisher", "notes": "Thunder finisher."},
+        "M1x4": {"name": "Melee M1 x4", "damage": 1600, "stun": 1.4, "startup": 1.05, "ken_break": false, "role": "filler", "notes": "Mobility M1 style."}
+      }
+    },
+    "Superhuman": {
+      "tier": "B",
+      "moves": {
+        "Z": {"name": "Beast Owl", "damage": 4200, "stun": 1.0, "startup": 0.38, "ken_break": false, "role": "damage", "notes": "Owl strike."},
+        "X": {"name": "Thunder Clap", "damage": 4800, "stun": 0.9, "startup": 0.4, "ken_break": false, "role": "damage", "notes": "Clap."},
+        "C": {"name": "Conqueror Gun", "damage": 5800, "stun": 1.1, "startup": 0.42, "ken_break": false, "role": "finisher", "notes": "Gun finisher."},
+        "M1x4": {"name": "Melee M1 x4", "damage": 1500, "stun": 1.4, "startup": 1.1, "ken_break": false, "role": "filler", "notes": "Basic M1 filler."}
+      }
+    },
+    "Death Step": {
+      "tier": "B",
+      "moves": {
+        "Z": {"name": "Rocket Kick", "damage": 4500, "stun": 1.0, "startup": 0.36, "ken_break": false, "role": "damage", "notes": "Rocket kick."},
+        "X": {"name": "Wind Bullet", "damage": 5000, "stun": 0.9, "startup": 0.38, "ken_break": false, "role": "damage", "notes": "Wind shot."},
+        "C": {"name": "Death Step", "damage": 6200, "stun": 1.2, "startup": 0.42, "ken_break": false, "role": "finisher", "notes": "Flame kick finisher."},
+        "M1x4": {"name": "Melee M1 x4", "damage": 1550, "stun": 1.4, "startup": 1.08, "ken_break": false, "role": "filler", "notes": "Melee filler."}
+      }
+    }
+  },
+  "guns": {
+    "None": {
+      "tier": "-",
+      "moves": {}
+    },
+    "Soul Guitar": {
+      "tier": "S",
+      "moves": {
+        "Z": {"name": "Soul Shred", "damage": 4500, "stun": 1.0, "startup": 0.38, "ken_break": false, "role": "damage", "notes": "Soul shred."},
+        "X": {"name": "Haunting Ballad", "damage": 6000, "stun": 2.0, "startup": 0.45, "ken_break": false, "role": "stun", "notes": "2s orb — great stun extender."}
+      }
+    },
+    "Kabucha": {
+      "tier": "A",
+      "moves": {
+        "Z": {"name": "Bomb Shot", "damage": 4000, "stun": 0.9, "startup": 0.35, "ken_break": false, "role": "damage", "notes": "Bomb."},
+        "X": {"name": "Explosive Shot", "damage": 5500, "stun": 1.0, "startup": 0.4, "ken_break": false, "role": "finisher", "notes": "Explosion."}
+      }
+    }
+  },
+  "races": {
+    "Human": {"mobility": 1.0, "notes": "Balanced baseline."},
+    "Mink": {"mobility": 1.15, "notes": "Extra speed for chase combos."},
+    "Fishman": {"mobility": 1.05, "notes": "Water bonus — use on sea maps."},
+    "Skypiea": {"mobility": 1.08, "notes": "Glide mobility."},
+    "Ghoul": {"mobility": 1.05, "notes": "Life steal on hit."},
+    "Cyborg": {"mobility": 1.0, "notes": "V4 disables Observation — great opener setup."},
+    "Draco": {"mobility": 1.1, "notes": "Flight mobility."},
+    "Shark": {"mobility": 1.05, "notes": "Underwater bonus."}
+  },
+  "preset_combos": {
+    "Dough": [
+      ["Fruit V", "Melee M1 x4", "Fruit C", "Fruit Z", "Fruit X", "Fighting C", "Fruit V"],
+      ["Fruit V", "Sword M1 x3", "Fruit C", "Fruit X", "Fruit Z", "Fighting Z", "Fighting C"]
+    ],
+    "Kitsune": [
+      ["Fruit C", "Melee M1 x4", "Fruit Z", "Fruit X", "Sword M1 x3", "Fruit V"],
+      ["Fruit C", "Fruit Z", "Sword Z", "Fruit X", "Fighting C", "Fruit V"]
+    ],
+    "Leopard": [
+      ["Fruit C", "Melee M1 x4", "Fruit Z", "Melee M1 x4", "Fruit X", "Fruit V"],
+      ["Fruit C", "Fruit Z", "Sword M1 x3", "Fruit X", "Fighting C", "Fruit V"]
+    ]
+  }
+}
